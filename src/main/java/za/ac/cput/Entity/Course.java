@@ -13,7 +13,7 @@ public class Course {
     private int departmentID, credit, duration;
     private boolean fullTime;
 
-    public Course(Coursebuilder course) {
+    public Course(CourseBuilder course) {
         this.courseCode = course.courseCode;
         this.title = course.title;
         this.departmentID = course.departmentID;
@@ -34,38 +34,38 @@ public class Course {
                 '}';
     }
 
-    public static class Coursebuilder {
+    public static class CourseBuilder {
 
         private String courseCode, title;
         private int departmentID, credit, duration;
         private boolean fullTime;
 
-        public Coursebuilder setCourseCode(String courseCode) {
+        public CourseBuilder setCourseCode(String courseCode) {
             this.courseCode = courseCode;
             return this;
         }
 
-        public Coursebuilder setTitle(String title) {
+        public CourseBuilder setTitle(String title) {
             this.title = title;
             return this;
         }
 
-        public Coursebuilder setDepartmentID(int departmentID) {
+        public CourseBuilder setDepartmentID(int departmentID) {
             this.departmentID = departmentID;
             return this;
         }
 
-        public Coursebuilder setCredit(int credit) {
+        public CourseBuilder setCredit(int credit) {
             this.credit = credit;
             return this;
         }
 
-        public Coursebuilder setDuration(int duration) {
+        public CourseBuilder setDuration(int duration) {
             this.duration = duration;
             return this;
         }
 
-        public Coursebuilder setFullTime(boolean fullTime) {
+        public CourseBuilder setFullTime(boolean fullTime) {
             this.fullTime = fullTime;
             return this;
         }
@@ -74,7 +74,7 @@ public class Course {
             return new Course(this);
         }
 
-        public Coursebuilder copy (Course course){
+        public CourseBuilder copy (Course course){
             this.courseCode = course.courseCode;
             this.title = course.title;
             this.departmentID = course.departmentID;
