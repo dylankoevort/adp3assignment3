@@ -13,10 +13,10 @@ public class Semester {
    private Date semesterStart;
    private Date semesterEnd;
 
-   public Semester(SemesterBuilder Y) {
-      this.semesterID = semesterID;
-      this.semesterStart = semesterStart;
-      this.semesterEnd = semesterEnd;
+   public Semester(SemesterBuilder semester) {
+      this.semesterID = semester.semesterID;
+      this.semesterStart = semester.semesterStart;
+      this.semesterEnd = semester.semesterEnd;
    }
 
    public static class SemesterBuilder{

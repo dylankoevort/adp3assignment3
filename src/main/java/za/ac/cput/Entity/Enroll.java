@@ -12,11 +12,11 @@ public class Enroll {
     private Date date;
     private boolean paymentReceived;
 
-    private Enroll(EnrollBuilder Y) {
-        this.studentID = studentID;
-        this.courseCode = courseCode;
+    private Enroll(EnrollBuilder enroll) {
+        this.studentID = enroll.studentID;
+        this.courseCode = enroll.courseCode;
         this.date = date;
-        this.paymentReceived = paymentReceived;
+        this.paymentReceived = enroll.paymentReceived;
     }
 
     public static class EnrollBuilder{
