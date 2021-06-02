@@ -15,7 +15,7 @@ public class Enroll {
     private Enroll(EnrollBuilder enroll) {
         this.studentID = enroll.studentID;
         this.courseCode = enroll.courseCode;
-        this.date = date;
+        this.date = enroll.date;
         this.paymentReceived = enroll.paymentReceived;
     }
 
