@@ -1,5 +1,14 @@
 package za.ac.cput.Factory;
 
+/**
+ *
+ * StudentFactory.java
+ * Factory class for Student entity
+ * @author Dylan Koevort 218088159
+ * 9 June 2021
+ *
+ */
+
 import za.ac.cput.Entity.Student;
 
 import java.util.UUID;

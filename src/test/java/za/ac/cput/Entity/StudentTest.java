@@ -1,5 +1,14 @@
 package za.ac.cput.Entity;
 
+/**
+ *
+ * StudentTest.java
+ * Test case for Student entity
+ * @author Dylan Koevort 218088159
+ * 9 June 2021
+ *
+ */
+
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.StudentFactory;
 
