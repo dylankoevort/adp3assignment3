@@ -18,8 +18,6 @@ public class CourseFactory {
             return null;
         }
 
-        String id = UUID.randomUUID().toString();
-
         return new Course.CourseBuilder()
                 .setCourseCode(courseCode)
                 .setTitle(title)
