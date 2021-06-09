@@ -18,5 +18,4 @@ class CourseTest {
         System.out.println(course);
         assertNotNull(course);
     }
-
 }
