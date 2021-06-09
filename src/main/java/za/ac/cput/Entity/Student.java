@@ -9,8 +9,8 @@ package za.ac.cput.Entity;
 
 public class Student {
 
-    private int studentId, age;
-    private String firstName, lastName, emailAddress, contactNo;
+    private int age;
+    private String studentId, firstName, lastName, emailAddress, contactNo;
 
     public Student(StudentBuilder builder) {
         this.studentId = builder.studentId;
@@ -35,11 +35,11 @@ public class Student {
 
     public static class StudentBuilder {
 
-        private int studentId, age;
-        private String firstName, lastName;
+        private int age;
+        private String studentId, firstName, lastName;
         private String emailAddress, contactNo;
 
-        public StudentBuilder setStudentId(int studentId) {
+        public StudentBuilder setStudentId(String studentId) {
             this.studentId = studentId;
             return this;
         }
