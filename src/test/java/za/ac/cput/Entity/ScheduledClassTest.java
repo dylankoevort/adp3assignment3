@@ -1,10 +1,15 @@
+/*
+Dinelle Kotze
+219089302
+ScheduledClassTest.java
+This is the test class for the ScheduledClass entity.
+ */
+
 package za.ac.cput.Entity;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.ScheduledClassFactory;
-
-
 
 class ScheduledClassTest
 {
