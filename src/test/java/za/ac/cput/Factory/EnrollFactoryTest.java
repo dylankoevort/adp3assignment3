@@ -16,11 +16,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EnrollFactoryTest {
 
-
+    Date d1 = new Date(2021,06,11);
     @Test
     void Enroll() {
         Date date = new Date();
-        Enroll build = EnrollFactory.build(56443,"ADP467","2021/03/07",true);
+        Enroll.EnrollBuilder build = EnrollFactory.build(56443,"ADP467",d1,true);
         System.out.print(build);
         assertNotNull(build);
         assertEquals(build,build);
