@@ -1,5 +1,10 @@
 package za.ac.cput.Factory;
-
+/**
+ * EnrollFactory.java
+ * TTD for EnrollFactory
+ * Author: Tisetso Kotoana
+ * Date:10 June 2021
+ */
 import za.ac.cput.Entity.Enroll;
 import java.lang.Boolean;
 

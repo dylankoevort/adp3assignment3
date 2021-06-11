@@ -7,6 +7,12 @@ import za.ac.cput.Entity.Semester;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
+/**
+ * SemesterFactoryTest.java
+ * TTD for SemesterFactoryTest
+ * Author: Tisetso Kotoana
+ * Date:10 June 2021
+ */
 
 class SemesterFactoryTest {
 

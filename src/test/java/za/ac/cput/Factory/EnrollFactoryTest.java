@@ -4,6 +4,12 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.Entity.Enroll;
 import za.ac.cput.Entity.Lecturer;
 
+/**
+ * EnrollFactoryTest.java
+ * TTD for EnrollFactoryTest
+ * Author: Tisetso Kotoana
+ * Date:10 June 2021
+ */
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
