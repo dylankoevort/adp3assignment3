@@ -15,11 +15,13 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 class SemesterFactoryTest {
+    Date d1 = new Date(2021,02,10);
+    Date d2 = new Date(2021,05,01);
 
     @Test
     void Semester() {
 
-        Semester build = SemesterFactory.build(57304,"02/09/21", "01/02/21");
+        Semester.SemesterBuilder build = SemesterFactory.build(57304,d1, d2);
         System.out.print(build);
         assertNotNull(build);
         assertEquals(build,build);
