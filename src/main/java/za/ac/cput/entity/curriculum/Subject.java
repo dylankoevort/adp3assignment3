@@ -8,7 +8,7 @@ package za.ac.cput.entity.curriculum;
 
 public class Subject {
     //this is my instance variables/attributes for th entity class Subject:
-    private int subjectCode;
+    private String subjectCode;
     private String subjectName;
     private int lecturerID;
     private String courseCode;
@@ -22,17 +22,20 @@ public class Subject {
         this.semesterID=b.semesterID;
 
     }
+    public String getSubjectCode() {
+        return subjectCode;
+    }
 
     //this is the static class SubjectBuilder/builder class in the Subject Entity
     public static class SubjectBuilder{
-        private int subjectCode;
+        private String subjectCode;
         private String subjectName;
         private int lecturerID;
         private String courseCode;
         private int semesterID;
 
         //all the setters in SubjectBuilder static class:
-        public SubjectBuilder setsubjectCode(int subjectCode){
+        public SubjectBuilder setsubjectCode(String subjectCode){
 
             this.subjectCode=subjectCode;
             return this;
@@ -60,6 +63,17 @@ public class Subject {
             return this;
         }
 
+        public Subject.SubjectBuilder copy (Subject s){
+            this.subjectCode= s.subjectCode;
+            this.subjectName=s.subjectName;
+            this.lecturerID=s.lecturerID;
+            this.courseCode=s.courseCode;
+            this.semesterID=s.semesterID;
+
+
+
+            return this;
+        }
 
         public Subject build(){
 
