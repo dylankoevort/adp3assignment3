@@ -15,7 +15,7 @@ class DepartmentTest {
 
     @Test
     void test(){
-        Department department = DepartmentFactory.build(420, "Information Technology", " ");
+        Department department = DepartmentFactory.build("021", "Information Technology", " ");
         System.out.println(department);
         assertNotNull(department);
     }

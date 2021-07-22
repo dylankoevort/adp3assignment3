@@ -11,14 +11,14 @@ import za.ac.cput.entity.tertiaryInstitution.Department;
 
 public class DepartmentFactory {
 
-        public static Department build (int departmentID, String departmentName, String departmentDesc){
+        public static Department build (String departmentId, String departmentName, String departmentDesc){
 
-            if( departmentID <= 0 || departmentName.isEmpty() || departmentDesc.isEmpty() ){
+            if( departmentId.isEmpty() || departmentName.isEmpty() || departmentDesc.isEmpty() ){
                 return null;
             }
 
             return new Department.DepartmentBuilder()
-                    .setDepartmentID(departmentID)
+                    .setDepartmentId(departmentId)
                     .setDepartmentName(departmentName)
                     .setDepartmentDesc(departmentDesc)
                     .build();
