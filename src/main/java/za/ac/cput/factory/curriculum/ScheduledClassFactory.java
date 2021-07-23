@@ -11,14 +11,15 @@ import za.ac.cput.entity.curriculum.ScheduledClass;
 
 public class ScheduledClassFactory
 {
-    public static ScheduledClass build (int classCode, int subjectCode, int roomCode, String classTime)
+    public static ScheduledClass build (String scheduledClassId, int classCode, int subjectCode, int roomCode, String classTime)
     {
-        if (classCode <= 0 || subjectCode <= 0 || roomCode <= 0 || classTime.isEmpty())
+        if (scheduledClassId.isEmpty() || classCode <= 0 || subjectCode <= 0 || roomCode <= 0 || classTime.isEmpty())
         {
             return null;
         }
 
         return new ScheduledClass.Builder()
+                .setScheduledClassId(scheduledClassId)
                 .setClassCode(classCode)
                 .setSubjectCode(subjectCode)
                 .setRoomCode(roomCode)
