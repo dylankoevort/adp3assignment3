@@ -7,7 +7,7 @@ package za.ac.cput.entity.tertiaryInstitution;
  */
 import java.util.Date;
 public class Enroll {
-    private int studentID;
+    private String studentID;
     private String courseCode;
     private Date date;
     private boolean paymentReceived;
@@ -19,13 +19,26 @@ public class Enroll {
         this.paymentReceived = enroll.paymentReceived;
     }
 
+    public String getStudentID() {
+        return studentID;
+    }
+    @Override
+    public String toString() {
+        return "EnrollBuilder{" +
+                "studentID=" + studentID +
+                ", courseCode='" + courseCode + '\'' +
+                ", date=" + date +
+                ", paymentReceived=" + paymentReceived +
+                '}';
+    }
+
     public static class EnrollBuilder{
-        private int studentID;
+        private String studentID;
         private String courseCode;
         private Date date;
         private boolean paymentReceived;
 
-        public EnrollBuilder setStudentID(int studentID) {
+        public EnrollBuilder setStudentID(String studentID) {
             this.studentID = studentID;
             return this;
         }
@@ -48,15 +61,16 @@ public class Enroll {
 
             return new Enroll(this);
         }
+        public Enroll.EnrollBuilder copy(Enroll enroll){
+            this.studentID=enroll.studentID;
+           this.courseCode=enroll.courseCode;
+           this.date=enroll.date;
+           this.paymentReceived=enroll.paymentReceived;
 
-        @Override
-        public String toString() {
-            return "EnrollBuilder{" +
-                    "studentID=" + studentID +
-                    ", courseCode='" + courseCode + '\'' +
-                    ", date=" + date +
-                    ", paymentReceived=" + paymentReceived +
-                    '}';
+
+            return this;
         }
+
+
     }
 }
