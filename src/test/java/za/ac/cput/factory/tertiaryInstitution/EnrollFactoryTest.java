@@ -20,7 +20,7 @@ class EnrollFactoryTest {
     @Test
     void Enroll() {
         Date date = new Date();
-        Enroll.EnrollBuilder build = EnrollFactory.build(56443,"ADP467",d1,true);
+        Enroll.EnrollBuilder build = EnrollFactory.build("20201ABC","ADP467",d1,true);
         System.out.print(build);
         assertNotNull(build);
         assertEquals(build,build);

@@ -9,7 +9,7 @@ import java.util.Date;
  * Date:01 June 2021
  */
 public class Semester {
-   private int semesterID;
+   private String semesterID;
    private Date semesterStart;
    private Date semesterEnd;
 
@@ -18,13 +18,24 @@ public class Semester {
       this.semesterStart = semester.semesterStart;
       this.semesterEnd = semester.semesterEnd;
    }
+   @Override
+   public String toString() {
+      return "SemesterBuilder{" +
+              "semesterID=" + semesterID +
+              ", semesterStart=" + semesterStart +
+              ", semesterEnd=" + semesterEnd +
+              '}';
+   }
+   public String getSemesterID() {
+      return semesterID;
+   }
 
    public static class SemesterBuilder{
-      private int semesterID;
+      private String semesterID;
       private Date semesterStart;
       private Date semesterEnd;
 
-      public SemesterBuilder setSemesterID(int semesterID) {
+      public SemesterBuilder setSemesterID(String semesterID) {
          this.semesterID = semesterID;
          return this;
       }
@@ -43,14 +54,14 @@ public class Semester {
 
          return new Semester(this);
       }
+      public Semester.SemesterBuilder copy(Semester semester){
+         this.semesterID=semester.semesterID;
+         this.semesterStart=semester.semesterStart;
+         this.semesterEnd=semester.semesterEnd;
 
-      @Override
-      public String toString() {
-         return "SemesterBuilder{" +
-                 "semesterID=" + semesterID +
-                 ", semesterStart=" + semesterStart +
-                 ", semesterEnd=" + semesterEnd +
-                 '}';
+         return this;
       }
+
+
    }
 }

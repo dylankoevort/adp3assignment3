@@ -10,8 +10,8 @@ import java.util.Date;
  */
 
 public class SemesterFactory {
-   public static Semester.SemesterBuilder build(int semesterID, Date semesterStart, Date semesterEnd){
-       if(semesterID<=0||semesterStart.equals("")  || semesterEnd.equals(""))
+   public static Semester.SemesterBuilder build(String semesterID, Date semesterStart, Date semesterEnd){
+       if(semesterID.equals("")||semesterStart.equals("")  || semesterEnd.equals(""))
            return null;
 
        return new Semester.SemesterBuilder()

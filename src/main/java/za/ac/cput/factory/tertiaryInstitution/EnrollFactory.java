@@ -10,9 +10,9 @@ import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import java.util.Date;
 
 public class EnrollFactory {
-    public static Enroll.EnrollBuilder build(int studentID, String courseCode, Date date, boolean paymentReceived){
+    public static Enroll.EnrollBuilder build(String studentID, String courseCode, Date date, boolean paymentReceived){
 
-        if(studentID<=0||courseCode.isEmpty() || date.equals("") )
+        if(studentID.equals("")||courseCode.isEmpty() || date.equals("") )
             return null;
 
         return new Enroll.EnrollBuilder()
