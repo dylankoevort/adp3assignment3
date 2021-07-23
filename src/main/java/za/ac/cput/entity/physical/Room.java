@@ -7,15 +7,19 @@ package za.ac.cput.entity.physical;
 
 public class Room {
 
-    private String roomType;
-    private int roomCode, roomCapacity, roomFloor, buildingID;
+    private String roomCode, roomType;
+    private int roomCapacity, roomFloor, buildingID;
 
     public Room(RoomBuilder room) {
-        this.roomType = room.roomType;
         this.roomCode = room.roomCode;
+        this.roomType = room.roomType;
         this.roomCapacity = room.roomCapacity;
         this.roomFloor = room.roomFloor;
         this.buildingID = room.buildingID;
+    }
+
+    public String getRoomCode() {
+        return roomCode;
     }
 
     @Override
@@ -31,15 +35,15 @@ public class Room {
 
     public static class RoomBuilder {
 
-        private String roomType;
-        private int roomCode, roomCapacity, roomFloor, buildingID;
+        private String roomCode, roomType;
+        private int roomCapacity, roomFloor, buildingID;
 
         public RoomBuilder setRoomType(String roomType) {
             this.roomType = roomType;
             return this;
         }
 
-        public RoomBuilder setRoomCode(int roomCode) {
+        public RoomBuilder setRoomCode(String roomCode) {
             this.roomCode = roomCode;
             return this;
         }

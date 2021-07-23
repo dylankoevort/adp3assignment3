@@ -7,14 +7,18 @@ package za.ac.cput.entity.physical;
 
 public class Building {
 
-    private int buildingID, roomCount;
-    private String buildingName, buildingAddress;
+    private int roomCount;
+    private String buildingID, buildingName, buildingAddress;
 
     public Building(BuildingBuilder building) {
         this.buildingID = building.buildingID;
         this.buildingName = building.buildingName;
         this.buildingAddress = building.buildingAddress;
         this.roomCount = building.roomCount;
+    }
+
+    public String getBuildingID() {
+        return buildingID;
     }
 
     @Override
@@ -28,10 +32,10 @@ public class Building {
     }
 
     public static class BuildingBuilder {
-        private int buildingID, roomCount;
-        private String buildingName, buildingAddress;
+        private int roomCount;
+        private String buildingID, buildingName, buildingAddress;
 
-        public BuildingBuilder setBuildingID(int buildingID) {
+        public BuildingBuilder setBuildingID(String buildingID) {
             this.buildingID = buildingID;
             return this;
         }
