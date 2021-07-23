@@ -1,6 +1,9 @@
 package za.ac.cput.factory.curriculum;
 
 import za.ac.cput.entity.curriculum.Subject;
+
+import java.util.UUID;
+
 /**
  * SubjectFactory.java
  * Created Factory class called SubjectFactory for Subject entity
@@ -11,10 +14,12 @@ import za.ac.cput.entity.curriculum.Subject;
 
 public class SubjectFactory {
 
-    public static Subject build(int subjectCode, String subjectName, int lecturerID, String courseCode, int semesterID) {
+    public static Subject build( String subjectName, int lecturerID, String courseCode, int semesterID) {
 
-        if(subjectCode<=0||subjectName.isEmpty()||lecturerID<=0||courseCode.isEmpty()||semesterID<=0)
+        if(subjectName.isEmpty()||lecturerID<=0||courseCode.isEmpty()||semesterID<=0)
             return null;
+
+        String subjectCode = UUID.randomUUID().toString();
 
         return new Subject.SubjectBuilder()
                 .setsubjectCode(subjectCode).setsubjectName(subjectName).setlecturerID(lecturerID).setcourseCode(courseCode).setsemesterID(semesterID).build();

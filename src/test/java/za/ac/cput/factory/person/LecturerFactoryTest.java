@@ -15,11 +15,14 @@ class LecturerFactoryTest {
 
     @Test
     void build() {
-        Lecturer build = LecturerFactory.build(8732635, "Max", "white", 43, "maxwhite@gmail.com", "0785556432");
+        Lecturer build = LecturerFactory.build("Max", "white", 43, "maxwhite@gmail.com", "0785556432");
         System.out.print(build);
         assertNotNull(build);
         assertEquals(build,build);
+        assertSame(build,build);
 
-
+    }
+    @Test
+    void fail(){
     }
 }

@@ -16,10 +16,15 @@ class SubjectFactoryTest {
     @Test
     void build() {
 
-        Subject b = SubjectFactory.build(397,"Applications Development 3",8732635,"363",321);
+        Subject b = SubjectFactory.build("Applications Development 3",8732635,"363",321);
         System.out.print(b);
         assertNotNull(b);
         assertEquals(b,b);
+        assertEquals(b,b);
+        assertSame(b,b);
 
+    }
+    @Test
+    void fail(){
     }
 }

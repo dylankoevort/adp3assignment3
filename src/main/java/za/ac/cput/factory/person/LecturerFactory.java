@@ -2,6 +2,8 @@ package za.ac.cput.factory.person;
 
 import za.ac.cput.entity.person.Lecturer;
 
+import java.util.UUID;
+
 /**
  * LecturerFactory.java
  * Created Factory class called LecturerFactory for Lecturer entity
@@ -11,10 +13,12 @@ import za.ac.cput.entity.person.Lecturer;
 
 public class LecturerFactory {
 
-    public static Lecturer build(int lecturerID, String firstName, String lastName, int age, String emailAddress, String contactNo) {
+    public static Lecturer build(String firstName, String lastName, int age, String emailAddress, String contactNo) {
 
-        if(lecturerID<=0||firstName.isEmpty()||lastName.isEmpty()||age<=0||emailAddress.isEmpty()||contactNo==null)
+        if(firstName.isEmpty()||lastName.isEmpty()||age<=0||emailAddress.isEmpty()||contactNo==null)
             return null;
+
+        String lecturerID = UUID.randomUUID().toString();
 
         return new Lecturer.LecturerBuilder()
                 .setlecturerID(lecturerID).setfirstName(firstName).setlastName(lastName).setage(age).setemailAddress(emailAddress).setcontactNo(contactNo).build();

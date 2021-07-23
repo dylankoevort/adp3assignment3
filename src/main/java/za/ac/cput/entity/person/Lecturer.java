@@ -7,7 +7,7 @@ package za.ac.cput.entity.person;
  */
 public class Lecturer {
     //this is my instance variables/attributes for th entity class Lecturer:
-    private int lecturerID;
+    private String lecturerID;
     private String firstName,lastName;
     private int age;
     private String emailAddress;
@@ -22,16 +22,19 @@ public class Lecturer {
         this.contactNo= b.contactNo;
 
     }
+    public String getLecturerID() {
+        return lecturerID;
+    }
     //this is the static class LecturerBuilder/builder class in the Lecturer Entity
     public static class LecturerBuilder{
-        private int lecturerID;
+        private String lecturerID;
         private String firstName,lastName;
         private int age;
         private String emailAddress;
         private String contactNo;
 
         //all the setters in LecturerBuilder static class:
-        public LecturerBuilder setlecturerID(int lecturerID){
+        public LecturerBuilder setlecturerID(String lecturerID){
 
             this.lecturerID=lecturerID;
             return this;
@@ -64,7 +67,16 @@ public class Lecturer {
             contactNo=contactno;
             return this;
         }
+        public Lecturer.LecturerBuilder copy (Lecturer l){
+            this.lecturerID= l.lecturerID;
+            this.firstName=l.firstName;
+            this.lastName=l.lastName;
+            this.age=l.age;
+            this.emailAddress=l.emailAddress;
+            this.contactNo=l.contactNo;
 
+            return this;
+        }
 
         public Lecturer build(){
 
