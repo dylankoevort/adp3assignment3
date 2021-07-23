@@ -15,7 +15,7 @@ class CourseTest {
 
     @Test
     void test(){
-        Course course = CourseFactory.build("ADP", "Applications Development Practise", 69, 20, 3, true);
+        Course course = CourseFactory.build("ADP", "Applications Development Practise", "057", 20, 3, true);
         System.out.println(course);
         assertNotNull(course);
     }

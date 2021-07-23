@@ -11,16 +11,16 @@ import za.ac.cput.entity.tertiaryInstitution.Course;
 
 public class CourseFactory {
 
-    public static Course build (String courseCode, String title, int departmentID, int credit, int duration,boolean fullTime){
+    public static Course build (String courseCode, String title, String departmentId, int credit, int duration,boolean fullTime){
 
-        if(courseCode.isEmpty() || title.isEmpty() || departmentID <= 0 || credit <= 0 || duration <= 0){
+        if(courseCode.isEmpty() || title.isEmpty() || departmentId.isEmpty() || credit <= 0 || duration <= 0){
             return null;
         }
 
         return new Course.CourseBuilder()
                 .setCourseCode(courseCode)
                 .setTitle(title)
-                .setDepartmentID(departmentID)
+                .setDepartmentId(departmentId)
                 .setCredit(credit)
                 .setDuration(duration)
                 .setFullTime(fullTime)

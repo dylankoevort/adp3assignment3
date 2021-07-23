@@ -9,17 +9,21 @@ package za.ac.cput.entity.tertiaryInstitution;
 
 public class Course {
 
-    private String courseCode, title;
-    private int departmentID, credit, duration;
+    private String departmentId, courseCode, title;
+    private int credit, duration;
     private boolean fullTime;
 
     public Course(CourseBuilder course) {
         this.courseCode = course.courseCode;
         this.title = course.title;
-        this.departmentID = course.departmentID;
+        this.departmentId = course.departmentId;
         this.credit = course.credit;
         this.duration = course.duration;
         this.fullTime = course.fullTime;
+    }
+
+    public String getcourseCode() {
+        return courseCode;
     }
 
     @Override
@@ -27,7 +31,7 @@ public class Course {
         return "Course{" +
                 "courseCode='" + courseCode + '\'' +
                 ", title='" + title + '\'' +
-                ", departmentID=" + departmentID +
+                ", departmentID=" + departmentId +
                 ", credit=" + credit +
                 ", duration=" + duration +
                 ", fullTime=" + fullTime +
@@ -37,7 +41,9 @@ public class Course {
     public static class CourseBuilder {
 
         private String courseCode, title;
-        private int departmentID, credit, duration;
+        private String departmentId;
+        private int credit;
+        private int duration;
         private boolean fullTime;
 
         public CourseBuilder setCourseCode(String courseCode) {
@@ -50,8 +56,8 @@ public class Course {
             return this;
         }
 
-        public CourseBuilder setDepartmentID(int departmentID) {
-            this.departmentID = departmentID;
+        public CourseBuilder setDepartmentId(String departmentId) {
+            this.departmentId = departmentId;
             return this;
         }
 
@@ -77,7 +83,7 @@ public class Course {
         public CourseBuilder copy (Course course){
             this.courseCode = course.courseCode;
             this.title = course.title;
-            this.departmentID = course.departmentID;
+            this.departmentId = course.departmentId;
             this.credit = course.credit;
             this.duration = course.duration;
             this.fullTime = course.fullTime;

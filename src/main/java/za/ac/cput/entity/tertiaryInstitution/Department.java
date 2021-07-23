@@ -9,19 +9,22 @@ package za.ac.cput.entity.tertiaryInstitution;
 
 public class Department {
 
-    private int departmentID;
-    private String departmentName, departmentDesc;
+    private String departmentId, departmentName, departmentDesc;
 
     public Department(DepartmentBuilder department){
-        this.departmentID = department.departmentID;
+        this.departmentId = department.departmentId;
         this.departmentName = department.departmentName;
         this.departmentDesc = department.departmentDesc;
+    }
+
+    public String getdepartmentId() {
+        return departmentId;
     }
 
     @Override
     public String toString() {
         return "Department{" +
-                "departmentID=" + departmentID +
+                "departmentID=" + departmentId +
                 ", departmentName='" + departmentName + '\'' +
                 ", departmentDesc='" + departmentDesc + '\'' +
                 '}';
@@ -29,11 +32,10 @@ public class Department {
 
     public static class DepartmentBuilder {
 
-        private int departmentID;
-        private String departmentName, departmentDesc;
+        private String departmentName, departmentDesc, departmentId;
 
-        public DepartmentBuilder setDepartmentID(int departmentID) {
-            this.departmentID = departmentID;
+        public DepartmentBuilder setDepartmentId(String departmentId) {
+            this.departmentId = departmentId;
             return this;
         }
 
@@ -52,7 +54,7 @@ public class Department {
         }
 
         public DepartmentBuilder copy(Department department){
-            this.departmentID = department.departmentID;
+            this.departmentId = department.departmentId;
             this.departmentName = department.departmentName;
             this.departmentDesc = department.departmentDesc;
 
