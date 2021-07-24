@@ -3,6 +3,7 @@ package za.ac.cput.repository.physical;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.physical.Room;
 import za.ac.cput.factory.physical.RoomFactory;
+import za.ac.cput.repository.physical.impl.RoomRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

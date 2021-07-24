@@ -1,4 +1,4 @@
-package za.ac.cput.repository.physical;
+package za.ac.cput.repository.physical.impl;
 
 /**
  * author: Llewelyn Klaase
@@ -6,11 +6,12 @@ package za.ac.cput.repository.physical;
  */
 
 import za.ac.cput.entity.physical.Building;
+import za.ac.cput.repository.physical.IBuildingRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class BuildingRepository implements IBuildingRepository{
+public class BuildingRepository implements IBuildingRepository {
 
     private static BuildingRepository Buildingrepository = null;
     private Set<Building> BuildingDB = null;

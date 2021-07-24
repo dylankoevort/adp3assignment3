@@ -1,6 +1,5 @@
 package za.ac.cput.repository.tertiaryInstitution.impl;
 
-import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import za.ac.cput.repository.tertiaryInstitution.IEnrollRepository;
 
