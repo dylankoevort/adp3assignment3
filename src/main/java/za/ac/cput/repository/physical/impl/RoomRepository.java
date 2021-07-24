@@ -1,4 +1,4 @@
-package za.ac.cput.repository.physical;
+package za.ac.cput.repository.physical.impl;
 
 import za.ac.cput.entity.physical.Room;
 

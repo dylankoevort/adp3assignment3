@@ -1,8 +1,6 @@
 package za.ac.cput.repository.tertiaryInstitution.impl;
 
 import za.ac.cput.entity.tertiaryInstitution.Semester;
-import za.ac.cput.entity.tertiaryInstitution.Semester;
-import za.ac.cput.repository.IRepository;
 import za.ac.cput.repository.tertiaryInstitution.ISemesterRepository;
 
 import java.util.HashSet;

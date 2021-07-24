@@ -1,4 +1,4 @@
-package za.ac.cput.repository.person.impl;
+package za.ac.cput.repository.person;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

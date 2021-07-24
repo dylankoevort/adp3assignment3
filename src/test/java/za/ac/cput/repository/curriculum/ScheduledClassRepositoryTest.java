@@ -1,4 +1,4 @@
-package za.ac.cput.repository.curriculum.impl;
+package za.ac.cput.repository.curriculum;
 
 /*
 Dinelle Kotze
@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.curriculum.ScheduledClass;
 import za.ac.cput.factory.curriculum.ScheduledClassFactory;
+import za.ac.cput.repository.curriculum.impl.ScheduledClassRepository;
 
 import java.util.Calendar;
 import java.util.Date;

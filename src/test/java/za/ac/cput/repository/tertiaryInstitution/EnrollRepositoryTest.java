@@ -1,12 +1,11 @@
-package za.ac.cput.repository.tertiaryInstitution.impl;
+package za.ac.cput.repository.tertiaryInstitution;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.entity.tertiaryInstitution.Enroll;
-import za.ac.cput.factory.tertiaryInstitution.DepartmentFactory;
 import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
+import za.ac.cput.repository.tertiaryInstitution.impl.EnrollRepository;
 
 import java.util.Date;
 

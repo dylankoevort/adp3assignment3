@@ -1,10 +1,11 @@
-package za.ac.cput.repository.tertiaryInstitution.impl;
+package za.ac.cput.repository.tertiaryInstitution;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.tertiaryInstitution.Course;
 import za.ac.cput.factory.tertiaryInstitution.CourseFactory;
+import za.ac.cput.repository.tertiaryInstitution.impl.CourseRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
