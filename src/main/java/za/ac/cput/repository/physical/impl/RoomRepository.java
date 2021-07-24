@@ -1,6 +1,7 @@
 package za.ac.cput.repository.physical.impl;
 
 import za.ac.cput.entity.physical.Room;
+import za.ac.cput.repository.physical.IRoomRepository;
 
 import java.util.HashSet;
 import java.util.Set;
