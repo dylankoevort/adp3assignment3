@@ -14,7 +14,7 @@ class BuildingTest {
 
     @Test
     void test(){
-        Building building = BuildingFactory.build(001, 100, "Administration Building", "01 Sesame street, Sesame Town, ABC123");
+        Building building = BuildingFactory.build("001", 100, "Administration Building", "01 Sesame street, Sesame Town, ABC123");
         System.out.println(building);
         assertNotNull(building);
     }
