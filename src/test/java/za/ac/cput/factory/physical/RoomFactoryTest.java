@@ -14,7 +14,7 @@ class RoomFactoryTest {
 
     @Test
     void build(){
-        Room build = RoomFactory.build("Theatre", 101,100, 1, 001);
+        Room build = RoomFactory.build("Theatre", "101",100, 1, 001);
         System.out.println(build);
         assertNotNull(build);
         assertEquals(build, build);
