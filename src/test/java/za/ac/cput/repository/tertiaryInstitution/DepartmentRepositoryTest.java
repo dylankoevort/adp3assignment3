@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class DepartmentRepositoryTest {
     private static DepartmentRepository repository = DepartmentRepository.getRepository();
-    private static Department department = DepartmentFactory.build("021", "PROJECT", " ");
+    private static Department department = DepartmentFactory.build("021", "PROJECTS", " ");
 
     @Test
     void a_create(){
