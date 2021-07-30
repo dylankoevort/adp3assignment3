@@ -29,6 +29,9 @@ class SubjectServiceTest {
         System.out.println("Created subject:"+ createdSubject);
 
     }
+    // this is the fail test for the Sub_create:
+    @Test
+    void Sub_createFail(){};
 
     @Test
     @Order(2)
@@ -40,6 +43,9 @@ class SubjectServiceTest {
 
 
     }
+    // this is the fail test for the Sub_read:
+    @Test
+    void Sub_readFail(){};
 
     @Test
     @Order(3)
@@ -48,6 +54,9 @@ class SubjectServiceTest {
         assertNotNull(Subjectservice.update(updated));
         System.out.println("Updated new semesterID of :"+ updated);
     }
+    // this is the fail test for the Sub_update:
+    @Test
+    void Sub_updateFail(){};
 
     @Test
     @Order(4)
@@ -57,11 +66,17 @@ class SubjectServiceTest {
         System.out.println("Deleted the following:"  + subje);
 
     }
+    // this is the fail test for the Sub_delete:
+    @Test
+    void Sub_deleteFail(){};
+
     @Test
     @Order(5)
     void Sub_getAll() {
         System.out.println("displaying all information: " + Subjectservice.getAll());
     }
 
-
+    // this is the fail test for the Sub_getAll:
+    @Test
+    void Sub_getAllFail(){};
 }

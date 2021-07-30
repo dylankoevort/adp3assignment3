@@ -30,6 +30,9 @@ class SubjectRepositoryTest {
         System.out.println("Created subject:"+ createdSubject);
 
     }
+    // this is the fail test for the Sub_create:
+    @Test
+    void Sub_createFail(){};
 
     @Test
     @Order(2)
@@ -41,6 +44,9 @@ class SubjectRepositoryTest {
 
 
     }
+    // this is the fail test for the Sub_read:
+    @Test
+    void Sub_readFail(){};
 
     @Test
     @Order(3)
@@ -49,6 +55,9 @@ class SubjectRepositoryTest {
         assertNotNull(Subjectrepository.update(updated));
         System.out.println("Updated new semesterID of :"+ updated);
     }
+    // this is the fail test for the Sub_update:
+    @Test
+    void Sub_updateFail(){};
 
     @Test
     @Order(4)
@@ -58,9 +67,15 @@ class SubjectRepositoryTest {
         System.out.println("Did the delete work:"  + s);
 
     }
+    // this is the fail test for the Sub_delete:
+    @Test
+    void Sub_deleteFail(){};
     @Test
     @Order(5)
     void Sub_getAll() {
         System.out.println("displaying all information: " + Subjectrepository.getAll());
     }
+    // this is the fail test for the Sub_getAll:
+    @Test
+    void Sub_getAllFail(){};
 }

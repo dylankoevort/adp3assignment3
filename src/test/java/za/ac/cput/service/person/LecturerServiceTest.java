@@ -30,6 +30,9 @@ class LecturerServiceTest {
         assertSame(created.getLecturerID(),lect.getLecturerID());
         System.out.println("Created subject:"+ created);
     }
+// this is the fail test for the Le_create:
+    @Test
+    void Le_createFail(){};
 
     @Test
     @Order(2)
@@ -39,6 +42,9 @@ class LecturerServiceTest {
         assertSame(le.getLecturerID(),lect.getLecturerID());
         System.out.println("Read:"+le);
     }
+    // this is the fail test for the Le_read:
+    @Test
+    void Le_readFail(){};
 
     @Test
     @Order(3)
@@ -47,6 +53,9 @@ class LecturerServiceTest {
         assertNotNull(service.update(updated));
         System.out.println("Updated new age of "+ updated);
     }
+    // this is the fail test for the Le_update:
+    @Test
+    void Le_updateFail(){};
 
     @Test
     @Order(4)
@@ -55,7 +64,9 @@ class LecturerServiceTest {
         assertTrue(de);
         System.out.println("deleted the following:" + lect.getLecturerID()+" ");
     }
-
+    // this is the fail test for the Le_delete:
+    @Test
+    void Le_deleteFaiL(){};
 
     @Test
     @Order(5)
@@ -64,4 +75,7 @@ class LecturerServiceTest {
             System.out.println("Displaying all information:" + service.getAll());
 
     }
+    // this is the fail test for the Le_getAll:
+    @Test
+    void Le_getAllFail(){};
 }

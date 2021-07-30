@@ -31,6 +31,9 @@ class LecturerRepositoryTest {
         System.out.println("Created Lecturer: "+ createdLecturer);
 
     }
+    // this is the fail test for the Le_create:
+    @Test
+    void Le_createFail(){};
 
     @Test
     @Order(2)
@@ -43,6 +46,9 @@ class LecturerRepositoryTest {
 
 
     }
+    // this is the fail test for the Le_read:
+    @Test
+    void Le_readFail(){};
 
 
     @Test
@@ -54,6 +60,9 @@ class LecturerRepositoryTest {
         System.out.println("Updated new age of :"+ updated);
 
     }
+    // this is the fail test for the Le_update:
+    @Test
+    void Le_updateFail(){};
 
 
     @Test
@@ -65,6 +74,9 @@ class LecturerRepositoryTest {
         System.out.println("Did the delete work: " + l);
 
     }
+    // this is the fail test for the Le_delete:
+    @Test
+    void Le_deleteFaiL(){};
 
     @Test
     @Order(5)
@@ -72,6 +84,8 @@ class LecturerRepositoryTest {
         System.out.println("displaying all information: " + repository.getAll());
     }
 
-
+    // this is the fail test for the Le_getAll:
+    @Test
+    void Le_getAllFail(){};
 
 }
