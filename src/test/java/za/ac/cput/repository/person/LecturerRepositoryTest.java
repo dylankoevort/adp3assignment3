@@ -37,8 +37,8 @@ class LecturerRepositoryTest {
     void Lect_read(){
 
         Lecturer le = repository.read(lecturer.getLecturerID());
-        assertEquals(lecturer.getLecturerID(),lecturer.getLecturerID());
-        assertSame(lecturer.getLecturerID(),lecturer.getLecturerID());
+        assertEquals(le.getLecturerID(),lecturer.getLecturerID());
+        assertSame(le.getLecturerID(),lecturer.getLecturerID());
         System.out.println("Reading Lecturer:"+ le);
 
 
@@ -69,7 +69,7 @@ class LecturerRepositoryTest {
     @Test
     @Order(5)
     void Lect_getAll() {
-        System.out.println("displaying all information: " + LecturerRepository.getRepository().getAll());
+        System.out.println("displaying all information: " + repository.getAll());
     }
 
 
