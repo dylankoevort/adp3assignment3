@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ScheduledClassServiceTest {
 
     private static IScheduledClassService service = ScheduledClassService.getService();
-    private static ScheduledClass scheduledClass = ScheduledClassFactory.build("AB123", 123, 123, 123, "10:00");
+    private static ScheduledClass scheduledClass = ScheduledClassFactory.build("AB123", 123, 123, "10:00");
 
     @Test
     void a_create() {
