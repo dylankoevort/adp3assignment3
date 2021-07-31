@@ -1,4 +1,4 @@
-package za.ac.cput.service.curriculum.impl;
+package za.ac.cput.service.curriculum;
 
 /*
 Dinelle Kotze
@@ -14,6 +14,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.curriculum.Examination;
 import za.ac.cput.factory.curriculum.ExaminationFactory;
 import za.ac.cput.service.curriculum.IExaminationService;
+import za.ac.cput.service.curriculum.impl.ExaminationService;
 import java.time.*;
 
 import static org.junit.jupiter.api.Assertions.*;
