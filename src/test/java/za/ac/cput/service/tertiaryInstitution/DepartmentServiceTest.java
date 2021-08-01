@@ -1,9 +1,9 @@
-package za.ac.cput.service.tertiaryInstitution.impl;
+package za.ac.cput.service.tertiaryInstitution;
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.factory.tertiaryInstitution.DepartmentFactory;
-import za.ac.cput.service.tertiaryInstitution.IDepartmentService;
+import za.ac.cput.service.tertiaryInstitution.impl.DepartmentService;
 
 import java.util.concurrent.TimeUnit;
 
