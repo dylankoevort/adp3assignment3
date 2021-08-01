@@ -7,13 +7,13 @@ This is the class for the Examination entity.
 
 package za.ac.cput.entity.curriculum;
 
-import java.util.Date;
+import java.time.*;
 
 public class Examination
 {
     private int subjectCode;
     private String examDesc, examId;
-    private Date examDate;
+    private LocalDate examDate;
 
     private Examination(Builder builder)
     {
@@ -41,7 +41,7 @@ public class Examination
     {
         private int subjectCode;
         private String examDesc, examId;
-        private Date examDate;
+        private LocalDate examDate;
 
         public Builder setExamId(String examId)
         {
@@ -62,7 +62,7 @@ public class Examination
             return this;
         }
 
-        public Builder setExamDate(Date examDate)
+        public Builder setExamDate(LocalDate examDate)
         {
             this.examDate = examDate;
             return this;

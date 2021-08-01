@@ -7,6 +7,9 @@ package za.ac.cput.repository.curriculum;
  * @author Dylan Koevort 218088159
  * 19 July 2021
  *
+ * ExaminationRepositoryTest.java
+ * Refactored date to localDate by Dinelle Kotze 219089302
+ * 31 July 2021
  *
  */
 
@@ -17,15 +20,18 @@ import za.ac.cput.entity.curriculum.Examination;
 import za.ac.cput.factory.curriculum.ExaminationFactory;
 import za.ac.cput.repository.curriculum.impl.ExaminationRepository;
 
-import java.util.Calendar;
-import java.util.Date;
+//import java.util.Calendar;
+//import java.util.Date;
+
+import java.time.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class ExaminationRepositoryTest {
     private static ExaminationRepository repository = ExaminationRepository.getRepository();
-    private static Date date = new Date(121, Calendar.NOVEMBER, 15);
+    //private static Date date = new Date(121, Calendar.NOVEMBER, 15);
+    private static LocalDate date = LocalDate.of(2021, 11, 15);
     private static Examination examination = ExaminationFactory.build(10077, "Project Management", date);
 
     @Test
