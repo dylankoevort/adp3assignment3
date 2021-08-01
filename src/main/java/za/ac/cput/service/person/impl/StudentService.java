@@ -21,6 +21,7 @@ public class StudentService implements IStudentService {
     private IStudentRepository repository;
 
     private StudentService() {
+
         this.repository = StudentRepository.getRepository();
     }
 
