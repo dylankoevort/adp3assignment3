@@ -1,4 +1,4 @@
-package za.ac.cput.service.person.impl;
+package za.ac.cput.service.impl;
 
 /**
  *
@@ -12,7 +12,7 @@ package za.ac.cput.service.person.impl;
 import za.ac.cput.entity.person.Student;
 import za.ac.cput.repository.person.IStudentRepository;
 import za.ac.cput.repository.person.impl.StudentRepository;
-import za.ac.cput.service.person.IStudentService;
+import za.ac.cput.service.IStudentService;
 
 import java.util.Set;
 

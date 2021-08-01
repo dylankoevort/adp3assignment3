@@ -1,4 +1,4 @@
-package za.ac.cput.service.person;
+package za.ac.cput.service;
 
 /**
  *
