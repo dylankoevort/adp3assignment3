@@ -14,7 +14,7 @@ import za.ac.cput.service.tertiaryInstitution.IEnrollService;
 
 import java.util.Set;
 
-public class EnrollService implements IEnrollService{
+public class EnrollService implements IEnrollService {
 
     private static IEnrollService service = null;
     private IEnrollRepository repository;

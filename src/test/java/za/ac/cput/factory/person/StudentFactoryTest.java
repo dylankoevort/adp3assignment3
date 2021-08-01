@@ -1,8 +1,8 @@
-package za.ac.cput.entity.person;
+package za.ac.cput.factory.person;
 
 /**
  *
- * StudentTest.java
+ * StudentFactoryTest.java
  * Test case for Student entity
  * @author Dylan Koevort 218088159
  * 9 June 2021
@@ -15,7 +15,7 @@ import za.ac.cput.factory.person.StudentFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StudentTest {
+class StudentFactoryTest {
 
     @Test
     void test() {

@@ -1,4 +1,4 @@
-package za.ac.cput.entity.tertiaryInstitution;
+package za.ac.cput.factory.tertiaryInstitution;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
@@ -6,12 +6,12 @@ import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.factory.tertiaryInstitution.DepartmentFactory;
 
 /**
- * CourseTest.java
+ * CourseFactoryTest.java
  * @author Jonathan Kleynhans 217268153
  * 09 June 2021
  */
 
-class DepartmentTest {
+class DepartmentFactoryTest {
 
     @Test
     void test(){

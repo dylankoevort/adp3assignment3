@@ -1,8 +1,8 @@
-package za.ac.cput.entity.curriculum;
+package za.ac.cput.factory.curriculum;
 
 /**
  *
- * ExaminationTest.java
+ * ExaminationFactoryTest.java
  * Test case for Examination entity
  * @author Dylan Koevort 218088159
  * 9 June 2021
@@ -11,7 +11,7 @@ package za.ac.cput.entity.curriculum;
 
 /**
  *
- * ExaminationTest.java
+ * ExaminationFactoryTest.java
  * Refactored date to localDate by Dinelle Kotze 219089302
  * 31 July 2021
  *
@@ -29,7 +29,7 @@ import java.time.*;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class ExaminationTest {
+class ExaminationFactoryTest {
 
     //Date date = new Date(121, Calendar.JUNE, 14);
 
