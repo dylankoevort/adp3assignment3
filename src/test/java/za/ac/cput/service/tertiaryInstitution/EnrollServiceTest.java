@@ -1,20 +1,20 @@
-//package za.ac.cput.service.tertiaryInstitution.impl;
-///**
-// *
-// * EnrollServiceTest.java
-// * Test of Enroll Service
-// * @author Tisetso Kotoana
-// * 30 July 2021
-// *
-// */
-//import org.junit.jupiter.api.Test;
-//import za.ac.cput.entity.tertiaryInstitution.Enroll;
-//import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
-//import za.ac.cput.service.tertiaryInstitution.IEnrollService;
-//import java.util.Date;
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class EnrollServiceTest {
+package za.ac.cput.service.tertiaryInstitution;
+/**
+ *
+ * EnrollServiceTest.java
+ * Test of Enroll Service
+ * @author Tisetso Kotoana
+ * 30 July 2021
+ *
+ */
+import org.junit.jupiter.api.Test;
+import za.ac.cput.entity.tertiaryInstitution.Enroll;
+import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
+import za.ac.cput.service.tertiaryInstitution.IEnrollService;
+import java.util.Date;
+import static org.junit.jupiter.api.Assertions.*;
+
+class EnrollServiceTest {
 //    private static IEnrollService service = EnrollService.getService();
 //    static Date d1 = new Date(2021,02,10);
 //
@@ -53,4 +53,4 @@
 //    void d_getAll() {
 //        System.out.println("Details: \n" + service.getAll());
 //    }
-//}
+}

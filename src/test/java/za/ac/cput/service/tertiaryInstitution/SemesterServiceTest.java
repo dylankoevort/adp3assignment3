@@ -1,20 +1,20 @@
-//package za.ac.cput.service.tertiaryInstitution.impl;
-///**
-// *
-// * SemesterServiceTest.java
-// * Test of Enroll Service
-// * @author Tisetso Kotoana
-// * 30 July 2021
-// *
-// */
-//import org.junit.jupiter.api.Test;
-//import za.ac.cput.entity.tertiaryInstitution.Semester;
-//import za.ac.cput.factory.tertiaryInstitution.SemesterFactory;
-//import za.ac.cput.service.tertiaryInstitution.ISemesterService;
-//import java.util.Date;
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class SemesterServiceTest {
+package za.ac.cput.service.tertiaryInstitution;
+/**
+ *
+ * SemesterServiceTest.java
+ * Test of Enroll Service
+ * @author Tisetso Kotoana
+ * 30 July 2021
+ *
+ */
+import org.junit.jupiter.api.Test;
+import za.ac.cput.entity.tertiaryInstitution.Semester;
+import za.ac.cput.factory.tertiaryInstitution.SemesterFactory;
+import za.ac.cput.service.tertiaryInstitution.ISemesterService;
+import java.util.Date;
+import static org.junit.jupiter.api.Assertions.*;
+
+class SemesterServiceTest {
 //
 //    private static ISemesterService service = SemesterService.getService();
 //    static Date d1 = new Date(2021,02,10);
@@ -56,4 +56,4 @@
 //        System.out.println("Details: \n" + service.getAll());
 //    }
 //
-//}
+}

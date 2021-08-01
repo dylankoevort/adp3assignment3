@@ -1,17 +1,17 @@
-//package za.ac.cput.repository.tertiaryInstitution;
-//
-//import org.junit.jupiter.api.MethodOrderer;
-//import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.TestMethodOrder;
-//import za.ac.cput.entity.tertiaryInstitution.Semester;
-//import za.ac.cput.factory.tertiaryInstitution.SemesterFactory;
-//import za.ac.cput.repository.tertiaryInstitution.impl.SemesterRepository;
-//
-//import java.util.Date;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//@TestMethodOrder(MethodOrderer.MethodName.class)
-//class SemesterRepositoryTest {
+package za.ac.cput.repository.tertiaryInstitution;
+
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import za.ac.cput.entity.tertiaryInstitution.Semester;
+import za.ac.cput.factory.tertiaryInstitution.SemesterFactory;
+import za.ac.cput.repository.tertiaryInstitution.impl.SemesterRepository;
+
+import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.*;
+@TestMethodOrder(MethodOrderer.MethodName.class)
+class SemesterRepositoryTest {
 //
 //    static Date d1 = new Date(2021,02,10);
 //    static Date d2 = new Date(2021,06,02);
@@ -51,4 +51,4 @@
 //
 //        System.out.println("Full Details: \n" + repository.getAll());
 //    }
-//}
+}

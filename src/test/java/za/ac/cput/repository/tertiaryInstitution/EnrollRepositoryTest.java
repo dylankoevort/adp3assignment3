@@ -1,20 +1,20 @@
-//package za.ac.cput.repository.tertiaryInstitution;
-//
-//import org.junit.jupiter.api.MethodOrderer;
-//import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.TestMethodOrder;
-//import za.ac.cput.entity.tertiaryInstitution.Enroll;
-//import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
-//import za.ac.cput.repository.tertiaryInstitution.impl.EnrollRepository;
-//
-//import java.util.Date;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//
-//@TestMethodOrder(MethodOrderer.MethodName.class)
-//
-//class EnrollRepositoryTest {
+package za.ac.cput.repository.tertiaryInstitution;
+
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import za.ac.cput.entity.tertiaryInstitution.Enroll;
+import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
+import za.ac.cput.repository.tertiaryInstitution.impl.EnrollRepository;
+
+import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+
+@TestMethodOrder(MethodOrderer.MethodName.class)
+
+class EnrollRepositoryTest {
 //   static Date d1 = new Date(2021,02,10);
 //    private static EnrollRepository repository = EnrollRepository.getRepository();
 //    //I'll have to come back for this, might have bugs
@@ -53,4 +53,4 @@
 //
 //       System.out.println("Full Details: \n" + repository.getAll());
 //    }
-//}
+}
