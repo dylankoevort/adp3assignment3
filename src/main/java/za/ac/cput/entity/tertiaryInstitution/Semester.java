@@ -26,6 +26,7 @@ public class Semester {
               ", semesterEnd=" + semesterEnd +
               '}';
    }
+
    public String getSemesterID() {
       return semesterID;
    }
@@ -54,7 +55,7 @@ public class Semester {
 
          return new Semester(this);
       }
-      public Semester.SemesterBuilder copy(Semester semester){
+      public SemesterBuilder copy(SemesterBuilder semester){
          this.semesterID=semester.semesterID;
          this.semesterStart=semester.semesterStart;
          this.semesterEnd=semester.semesterEnd;

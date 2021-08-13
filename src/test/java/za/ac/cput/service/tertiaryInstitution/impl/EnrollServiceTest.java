@@ -7,12 +7,16 @@ package za.ac.cput.service.tertiaryInstitution.impl;
  * 30 July 2021
  *
  */
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
 import za.ac.cput.service.tertiaryInstitution.IEnrollService;
 import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
+
+@TestMethodOrder(MethodOrderer.MethodName.class)
 
 class EnrollServiceTest {
     private static IEnrollService service = EnrollService.getService();

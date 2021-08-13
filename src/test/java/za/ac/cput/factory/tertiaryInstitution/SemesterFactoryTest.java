@@ -21,7 +21,7 @@ class SemesterFactoryTest {
     @Test
     void Semester() {
 
-        Semester.SemesterBuilder build = SemesterFactory.build("2021ICT",d1, d2);
+        Semester build = SemesterFactory.build("2021ICT",d1, d2);
         System.out.print(build);
         assertNotNull(build);
         assertEquals(build,build);
