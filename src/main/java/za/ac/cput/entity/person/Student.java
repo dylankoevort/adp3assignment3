@@ -12,7 +12,9 @@ public class Student {
     private int age;
     private String studentId, firstName, lastName, emailAddress, contactNo;
 
-    public Student(StudentBuilder builder) {
+    private Student() {}
+
+    private Student(StudentBuilder builder) {
         this.studentId = builder.studentId;
         this.age = builder.age;
         this.firstName = builder.firstName;
@@ -23,6 +25,26 @@ public class Student {
 
     public String getStudentId() {
         return studentId;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public String getContactNo() {
+        return contactNo;
     }
 
     @Override

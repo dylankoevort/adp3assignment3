@@ -15,6 +15,8 @@ public class Examination
     private String examDesc, examId;
     private LocalDate examDate;
 
+    private Examination() {}
+
     private Examination(Builder builder)
     {
         this.examId = builder.examId;
@@ -25,6 +27,18 @@ public class Examination
 
     public String getExamId() {
         return examId;
+    }
+
+    public int getSubjectCode() {
+        return subjectCode;
+    }
+
+    public String getExamDesc() {
+        return examDesc;
+    }
+
+    public LocalDate getExamDate() {
+        return examDate;
     }
 
     @Override
