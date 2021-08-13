@@ -21,6 +21,14 @@ public class Department {
         return departmentId;
     }
 
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public String getDepartmentDesc() {
+        return departmentDesc;
+    }
+
     @Override
     public String toString() {
         return "Department{" +
