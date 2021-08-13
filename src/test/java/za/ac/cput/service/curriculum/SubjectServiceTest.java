@@ -1,30 +1,29 @@
-package za.ac.cput.repository.curriculum;
+package za.ac.cput.service.curriculum;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-
-import static org.junit.jupiter.api.Assertions.*;
 import za.ac.cput.entity.curriculum.Subject;
 import za.ac.cput.factory.curriculum.SubjectFactory;
-import za.ac.cput.repository.curriculum.impl.SubjectRepository;
+import za.ac.cput.service.curriculum.impl.SubjectService;
 
+import static org.junit.jupiter.api.Assertions.*;
 /**
  *
- * Created SubjectRepositoryTest
+ * Created SubjectServiceTest
  * Author: Shane Knoll (218279124)
- * 22 July2021
+ * 29 July2021
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class SubjectRepositoryTest {
+class SubjectServiceTest {
 
-    private  static SubjectRepository Subjectrepository = SubjectRepository.getRepository();
-    private static Subject subject= SubjectFactory.build("Applications Development 3",7735635,"372",321);
+    private static ISubjectService Subjectservice = SubjectService.getService();
+    private static Subject subject= SubjectFactory.build("Applications Development 3",8732635,"363",321);
     @Test
     @Order(1)
     void Sub_create() {
-        Subject createdSubject = Subjectrepository.create(subject);
+        Subject createdSubject = Subjectservice.create(subject);
         assertEquals(createdSubject.getSubjectCode(),subject.getSubjectCode());
         assertSame(createdSubject.getSubjectCode(),subject.getSubjectCode());
         System.out.println("Created subject:"+ createdSubject);
@@ -37,7 +36,7 @@ class SubjectRepositoryTest {
     @Test
     @Order(2)
     void Sub_read() {
-        Subject s = Subjectrepository.read(subject.getSubjectCode());
+        Subject s = Subjectservice.read(subject.getSubjectCode());
         assertEquals(s.getSubjectCode(),subject.getSubjectCode());
         assertSame(s.getSubjectCode(),subject.getSubjectCode());
         System.out.println("Reading Subject:"+ s);
@@ -52,7 +51,7 @@ class SubjectRepositoryTest {
     @Order(3)
     void Sub_update() {
         Subject updated = new Subject.SubjectBuilder().copy(subject).setsemesterID(123).build();
-        assertNotNull(Subjectrepository.update(updated));
+        assertNotNull(Subjectservice.update(updated));
         System.out.println("Updated new semesterID of :"+ updated);
     }
     // this is the fail test for the Sub_update:
@@ -62,19 +61,21 @@ class SubjectRepositoryTest {
     @Test
     @Order(4)
     void Sub_delete() {
-        boolean s= Subjectrepository.delete(subject.getSubjectCode());
-        assertTrue(s);
-        System.out.println("Did the delete work:"  + s);
+        boolean subje= Subjectservice.delete(subject.getSubjectCode());
+        assertTrue(subje);
+        System.out.println("Deleted the following:"  + subje);
 
     }
     // this is the fail test for the Sub_delete:
     @Test
     void Sub_deleteFail(){};
+
     @Test
     @Order(5)
     void Sub_getAll() {
-        System.out.println("displaying all information: " + Subjectrepository.getAll());
+        System.out.println("displaying all information: " + Subjectservice.getAll());
     }
+
     // this is the fail test for the Sub_getAll:
     @Test
     void Sub_getAllFail(){};

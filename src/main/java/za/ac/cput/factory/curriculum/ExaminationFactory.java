@@ -12,11 +12,11 @@ package za.ac.cput.factory.curriculum;
 import za.ac.cput.entity.curriculum.Examination;
 import za.ac.cput.util.GenericHelper;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ExaminationFactory {
 
-    public static Examination build(int subjectCode, String examDesc, Date examDate) {
+    public static Examination build(int subjectCode, String examDesc, LocalDate examDate) {
 
         if(subjectCode <= 0 || examDesc.isEmpty() || examDate == null) {
             return null;

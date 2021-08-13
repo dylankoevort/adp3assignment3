@@ -9,13 +9,12 @@ package za.ac.cput.entity.curriculum;
 
 public class ScheduledClass
 {
-    private int classCode, subjectCode, roomCode;
+    private int subjectCode, roomCode;
     private String scheduledClassId, classTime;
 
     private ScheduledClass(Builder builder)
     {
         this.scheduledClassId = builder.scheduledClassId;
-        this.classCode = builder.classCode;
         this.subjectCode = builder.subjectCode;
         this.roomCode = builder.roomCode;
         this.classTime = builder.classTime;
@@ -29,7 +28,6 @@ public class ScheduledClass
     public String toString() {
         return "ScheduledClassRepository{" +
                 "scheduledClassId=" + scheduledClassId + '\'' +
-                ", classCode=" + classCode + '\'' +
                 ", subjectCode=" + subjectCode + '\'' +
                 ", roomCode='" + roomCode + '\'' +
                 ", classTime=" + classTime + '\'' +
@@ -38,18 +36,12 @@ public class ScheduledClass
 
     public static class Builder
     {
-        private int classCode, subjectCode, roomCode;
+        private int subjectCode, roomCode;
         private String scheduledClassId, classTime;
 
         public Builder setScheduledClassId(String scheduledClassId)
         {
             this.scheduledClassId = scheduledClassId;
-            return this;
-        }
-
-        public Builder setClassCode(int classCode)
-        {
-            this.classCode = classCode;
             return this;
         }
 
@@ -79,7 +71,6 @@ public class ScheduledClass
         public Builder copy(ScheduledClass scheduledClass)
         {
             this.scheduledClassId = scheduledClass.scheduledClassId;
-            this.classCode = scheduledClass.classCode;
             this.subjectCode = scheduledClass.subjectCode;
             this.roomCode = scheduledClass.roomCode;
             this.classTime = scheduledClass.classTime;

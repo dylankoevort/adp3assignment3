@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class ScheduledClassRepositoryTest {
     private static ScheduledClassRepository repository = ScheduledClassRepository.getRepository();
-    private static ScheduledClass scheduledClass = ScheduledClassFactory.build("AD11", 111, 112, 122, "10:15");
+    private static ScheduledClass scheduledClass = ScheduledClassFactory.build("AD11", 112, 122, "10:15");
 
     @Test
     void a_create() {

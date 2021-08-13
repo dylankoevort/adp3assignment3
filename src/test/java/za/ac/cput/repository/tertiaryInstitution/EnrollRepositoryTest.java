@@ -7,7 +7,6 @@ import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
 import za.ac.cput.repository.tertiaryInstitution.impl.EnrollRepository;
 
-import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,10 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
 class EnrollRepositoryTest {
-
+   static Date d1 = new Date(2021,02,10);
     private static EnrollRepository repository = EnrollRepository.getRepository();
-    private static Date d1 = new Date(2021, Calendar.FEBRUARY, 13);
-
+    //I'll have to come back for this, might have bugs
     private static Enroll enroll = EnrollFactory.build("2021ICT", "ADP2021",d1,true );
 
     @Test
