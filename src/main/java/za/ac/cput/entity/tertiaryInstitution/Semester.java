@@ -55,7 +55,7 @@ public class Semester {
 
          return new Semester(this);
       }
-      public SemesterBuilder copy(SemesterBuilder semester){
+      public SemesterBuilder copy(Semester semester){
          this.semesterID=semester.semesterID;
          this.semesterStart=semester.semesterStart;
          this.semesterEnd=semester.semesterEnd;

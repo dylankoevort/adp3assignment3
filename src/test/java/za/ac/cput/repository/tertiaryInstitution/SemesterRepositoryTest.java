@@ -17,7 +17,7 @@ class SemesterRepositoryTest {
     static Date d2 = new Date(2021,06,02);
     private static SemesterRepository repository = SemesterRepository.getRepository();
 
-    private static Semester semester = SemesterFactory.build("2021ICT", "2021/02/01","2021/06/01",true );
+    private static Semester semester = SemesterFactory.build("2021ICT", d1,d2);
 
     @Test
     void a_create(){
