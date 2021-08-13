@@ -9,6 +9,7 @@ package za.ac.cput.service.person.impl;
  *
  */
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.person.Student;
 import za.ac.cput.repository.person.IStudentRepository;
 import za.ac.cput.repository.person.impl.StudentRepository;
@@ -16,6 +17,7 @@ import za.ac.cput.service.person.IStudentService;
 
 import java.util.Set;
 
+@Service
 public class StudentService implements IStudentService {
     private static IStudentService service = null;
     private IStudentRepository repository;
