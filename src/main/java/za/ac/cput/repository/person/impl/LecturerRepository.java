@@ -31,8 +31,8 @@ public class LecturerRepository implements ILecturerRepository{
     @Override
     public Lecturer create(Lecturer lecturer){
         boolean success = lecturerDB.add(lecturer);
-        if(!success)
-            return null;
+        if(!success){
+            return null;}
         return lecturer;
     }
 
