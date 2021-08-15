@@ -7,6 +7,7 @@ package za.ac.cput.service.tertiaryInstitution;
  * 30 July 2021
  *
  */
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import za.ac.cput.factory.tertiaryInstitution.EnrollFactory;
@@ -39,8 +40,8 @@ class EnrollServiceTest {
 
     @Test
     void c_update() {
-        Enroll updated = new Enroll.EnrollBuilder().copy(enroll).setCourseCode("ADP7070").build();
-       assertNotNull(service.update(updated));
+        Enroll updated = new Enroll.EnrollBuilder().copy(enroll).setStudentID("67ADP").build();
+       Assertions.assertNotNull(service.update(updated));
         System.out.println("Updated: " + updated);
    }
 
@@ -48,11 +49,11 @@ class EnrollServiceTest {
    void e_delete() {
         boolean deleted = service.delete(enroll.getStudentID());
        assertTrue(deleted);
-        System.out.println("Delete: " + deleted);
+        System.out.println("Is it deleted? " + deleted);
     }
 
     @Test
     void d_getAll() {
-       System.out.println("Details: \n" + service.getAll());
+       System.out.println("Enroller Details \n" + service.getAll());
    }
 }

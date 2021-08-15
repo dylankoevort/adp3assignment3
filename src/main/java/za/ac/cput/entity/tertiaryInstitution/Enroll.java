@@ -23,7 +23,20 @@ public class Enroll {
     }
 
     public String getStudentID() {
+
         return studentID;
+    }
+
+    public String getCourseCode(){
+        return courseCode;
+    }
+
+    public Date getDate(){
+        return date;
+    }
+
+    public boolean getPaymentReceived(){
+        return paymentReceived;
     }
     @Override
     public String toString() {

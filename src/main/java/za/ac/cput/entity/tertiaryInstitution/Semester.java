@@ -28,7 +28,14 @@ public class Semester {
    }
 
    public String getSemesterID() {
+
       return semesterID;
+   }
+   public Date getSemesterStart(){
+      return semesterStart;
+   }
+   public Date getSemesterEnd(){
+      return semesterEnd;
    }
 
    public static class SemesterBuilder{
