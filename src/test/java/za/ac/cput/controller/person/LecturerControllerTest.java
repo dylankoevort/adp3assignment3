@@ -28,6 +28,8 @@ class LecturerControllerTest {
     private TestRestTemplate restTemplate;
     private final String BASE_URL = "http://localhost:8080/lecturer";
 
+
+
     @Test
     @Order(1)
     void create() {
@@ -35,7 +37,6 @@ class LecturerControllerTest {
         ResponseEntity<Lecturer> postResponse = restTemplate.postForEntity(url, lect, Lecturer.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-
         lect = postResponse.getBody();
         System.out.println("Saved data: " + lect);
         assertEquals(lect.getLecturerID(), postResponse.getBody().getLecturerID());
@@ -47,7 +48,7 @@ class LecturerControllerTest {
         String url = BASE_URL + "/readlect" + lect.getLecturerID();
         System.out.println("URL for read: " + url);
         ResponseEntity<Lecturer> response = restTemplate.getForEntity(url, Lecturer.class);
-        assertEquals(lect.getLecturerID(), response.getBody().getLecturerID());
+        assertEquals(response.getBody().getLecturerID(), response.getBody().getLecturerID());
     }
 
     @Test
@@ -73,8 +74,13 @@ class LecturerControllerTest {
     @Order(5)
     void getAll_Lect() {
         String url = BASE_URL + "/getalllect";
-
+        HttpHeaders head = new HttpHeaders();
+        HttpEntity<String> entity = new HttpEntity<>(null, head);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+        System.out.println(url);
         System.out.println("Show All Lecturers:");
+        System.out.println(response);
+        System.out.println(response.getBody());
 
     }
 

@@ -1,5 +1,6 @@
 package za.ac.cput.controller.curriculum;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.curriculum.Subject;
 
@@ -18,12 +19,12 @@ import java.util.Set;
 @RestController
 @RequestMapping("/subject")
 public class SubjectController {
-
+    @Autowired
     private SubjectService subjectService;
 
-    @PostMapping("/createsub")
+    @PostMapping("/creates")
     public Subject  create(@RequestBody Subject s){
-     Subject  su = SubjectFactory.build(s.getSubjectCode(),s.getLecturerID(),s.getCourseCode(),s.getSemesterID());
+     Subject  su = SubjectFactory.build(s.getSubjectName(),s.getLecturerID(),s.getCourseCode(),s.getSemesterID());
         return  subjectService.create(su);
     }
     @GetMapping("/readsub")

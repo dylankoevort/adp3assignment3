@@ -16,6 +16,18 @@ public class Subject {
 
     private Subject(){}
 
+    //toString for the Subject class
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "subjectCode=" + subjectCode +
+                ", subjectName='" + subjectName + '\'' +
+                ", lecturerID=" + lecturerID +
+                ", courseCode='" + courseCode + '\'' +
+                ", semesterID=" + semesterID +
+                '}';
+    }
+
     private Subject(SubjectBuilder b){
         this.subjectCode=b.subjectCode;
         this.subjectName=b.subjectName;
@@ -43,6 +55,9 @@ public class Subject {
     public int getSemesterID() {
         return semesterID;
     }
+
+
+
 
     //this is the static class SubjectBuilder/builder class in the Subject Entity
     public static class SubjectBuilder{
@@ -107,15 +122,5 @@ public class Subject {
 
 
 
-    //toString for the Subject class
-    @Override
-    public String toString() {
-        return "Subject{" +
-                "subjectCode=" + subjectCode +
-                ", subjectName='" + subjectName + '\'' +
-                ", lecturerID=" + lecturerID +
-                ", courseCode='" + courseCode + '\'' +
-                ", semesterID=" + semesterID +
-                '}';
-    }
+
 }

@@ -31,8 +31,8 @@ public class SubjectRepository implements ISubjectRepository {
     @Override
     public Subject create(Subject subject){
         boolean success = SubjectDB.add(subject);
-        if(!success)
-            return null;
+        if(!success){
+            return null;}
         return subject;
     }
 

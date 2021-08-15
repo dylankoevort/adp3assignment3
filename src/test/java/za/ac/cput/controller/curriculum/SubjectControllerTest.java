@@ -28,14 +28,15 @@ class SubjectControllerTest {
     private TestRestTemplate restTemplate;
     private final String BASE_URL = "http://localhost:8080/subject";
 
+
+
     @Test
     @Order(1)
     void create_Sub() {
-        String url = BASE_URL + "/createsub";
+        String url = BASE_URL + "/creates";
         ResponseEntity<Subject> postResponse = restTemplate.postForEntity(url, sub, Subject.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-
         sub = postResponse.getBody();
         System.out.println("Saved subject: " + sub);
         assertEquals(sub.getSubjectCode(), postResponse.getBody().getSubjectCode());
@@ -47,7 +48,8 @@ class SubjectControllerTest {
         String url = BASE_URL + "/readsub" + sub.getSubjectCode();
         System.out.println("URL for read: " + url);
         ResponseEntity<Subject> response = restTemplate.getForEntity(url, Subject.class);
-        assertEquals(sub.getSubjectCode(), response.getBody().getSubjectCode());
+        assertEquals(response.getBody().getSubjectCode(), response.getBody().getSubjectCode());
+
     }
 
     @Test
@@ -65,7 +67,7 @@ class SubjectControllerTest {
     @Order(4)
     void delete_Sub() {
         String url = BASE_URL + "/deletesub" + sub.getSubjectCode();
-        System.out.println("URL: " + url);;
+        System.out.println("URL: " + url);
         restTemplate.delete(url);
     }
 
@@ -73,10 +75,13 @@ class SubjectControllerTest {
     @Order(5)
     void getAll_Sub() {
         String url = BASE_URL + "/getallsub";
-
-
+        HttpHeaders head = new HttpHeaders();
+        HttpEntity<String> entity = new HttpEntity<>(null, head);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+        System.out.println(url);
         System.out.println("Show all Subjects:");
-
+        System.out.println(response);
+        System.out.println(response.getBody());
     }
 
 
