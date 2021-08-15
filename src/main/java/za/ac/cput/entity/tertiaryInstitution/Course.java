@@ -13,6 +13,8 @@ public class Course {
     private int credit, duration;
     private boolean fullTime;
 
+    private Course(){}
+
     public Course(CourseBuilder course) {
         this.courseCode = course.courseCode;
         this.title = course.title;
@@ -22,8 +24,28 @@ public class Course {
         this.fullTime = course.fullTime;
     }
 
+    public String getDepartmentId(){
+        return departmentId;
+    }
+
     public String getcourseCode() {
         return courseCode;
+    }
+
+    public String getcourseTitle(){
+        return title;
+    }
+
+    public int getCredit(){
+        return credit;
+    }
+
+    public int getDuration(){
+        return duration;
+    }
+
+    public boolean getFullTime(){
+        return fullTime;
     }
 
     @Override
