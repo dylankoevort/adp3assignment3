@@ -12,9 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.entity.physical.Building;
-import za.ac.cput.entity.physical.Room;
 import za.ac.cput.factory.physical.BuildingFactory;
-import za.ac.cput.factory.physical.RoomFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
