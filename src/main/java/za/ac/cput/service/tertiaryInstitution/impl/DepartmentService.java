@@ -1,5 +1,6 @@
 package za.ac.cput.service.tertiaryInstitution.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.repository.tertiaryInstitution.IDepartmentRepository;
 import za.ac.cput.repository.tertiaryInstitution.impl.DepartmentRepository;
@@ -14,6 +15,7 @@ import java.util.Set;
  * 30 July 2021
  */
 
+@Service
 public class DepartmentService implements IDepartmentService {
     private static IDepartmentService service = null;
     private IDepartmentRepository repository;

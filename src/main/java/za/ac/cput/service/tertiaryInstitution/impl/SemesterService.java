@@ -8,6 +8,7 @@ package za.ac.cput.service.tertiaryInstitution.impl;
  * 30 July 2021
  *
  */
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.tertiaryInstitution.Semester;
 import za.ac.cput.repository.tertiaryInstitution.ISemesterRepository;
 import za.ac.cput.repository.tertiaryInstitution.impl.SemesterRepository;
@@ -15,6 +16,7 @@ import za.ac.cput.service.tertiaryInstitution.ISemesterService;
 
 import java.util.Set;
 
+@Service
 public class SemesterService implements ISemesterService {
     private static ISemesterService service = null;
     private ISemesterRepository repository;

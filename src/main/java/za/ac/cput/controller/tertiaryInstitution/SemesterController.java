@@ -14,7 +14,7 @@ import za.ac.cput.service.tertiaryInstitution.impl.SemesterService;
 import java.util.Set;
 
 @RestController
-@RequestMapping
+@RequestMapping("/semester")
 public class SemesterController {
     @Autowired
     private SemesterService semesterService;
@@ -24,17 +24,19 @@ public class SemesterController {
         Semester newSemester =  SemesterFactory.build(semester.getSemesterID(), semester.getSemesterStart(),semester.getSemesterEnd());
         return semesterService.create(newSemester);
     }
+
     @RequestMapping("/read{xy}")
-        public Semester read(@PathVariable String xy){
+    public Semester read(@PathVariable String xy){
         return semesterService.read(xy);
     }
-    @PostMapping("/update{xy}")
+
+    @PostMapping("/update")
     public Semester update(@RequestBody Semester semester){
         return semesterService.update(semester);
 
     }
     @PostMapping("/delete{xy}")
-    public boolean delete(@RequestBody String xy){
+    public boolean delete(@PathVariable String xy){
         return semesterService.delete(xy);
     }
     @GetMapping("/getall")

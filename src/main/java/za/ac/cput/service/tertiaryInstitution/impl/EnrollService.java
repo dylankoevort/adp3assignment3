@@ -7,6 +7,7 @@ package za.ac.cput.service.tertiaryInstitution.impl;
  * 30 July 2021
  *
  */
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.tertiaryInstitution.Enroll;
 import za.ac.cput.repository.tertiaryInstitution.IEnrollRepository;
 import za.ac.cput.repository.tertiaryInstitution.impl.EnrollRepository;
@@ -14,6 +15,7 @@ import za.ac.cput.service.tertiaryInstitution.IEnrollService;
 
 import java.util.Set;
 
+@Service
 public class EnrollService implements IEnrollService {
 
     private static IEnrollService service = null;

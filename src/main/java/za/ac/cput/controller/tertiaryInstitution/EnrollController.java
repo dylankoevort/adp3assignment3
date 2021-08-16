@@ -14,8 +14,7 @@ import za.ac.cput.service.tertiaryInstitution.impl.EnrollService;
 import java.util.Set;
 
 @RestController
-@RequestMapping
-
+@RequestMapping("/enroll")
 public class EnrollController {
     @Autowired
     private EnrollService enrollService;
@@ -32,15 +31,16 @@ public class EnrollController {
         return enrollService.read(xy);
     }
 
-    @PostMapping("/update{xy}")
+    @PostMapping("/update")
     public Enroll update(@RequestBody Enroll enroll){
 
         return enrollService.update(enroll);
     }
     @PostMapping("/delete/{xy}")
-    public boolean delete(@RequestBody String xy){
+    public boolean delete(@PathVariable String xy){
         return enrollService.delete(xy);
     }
+
     @GetMapping("/getall")
     public Set <Enroll> getAll(){
         return enrollService.getAll();
