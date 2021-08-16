@@ -8,6 +8,7 @@ This is the service implementation for the ScheduledClass entity.
 31 July 2021
  */
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.curriculum.ScheduledClass;
 import za.ac.cput.repository.curriculum.IScheduledClassRepository;
 import za.ac.cput.repository.curriculum.impl.ScheduledClassRepository;
@@ -15,7 +16,8 @@ import za.ac.cput.service.curriculum.IScheduledClassService;
 
 import java.util.Set;
 
-public class ScheduledClassService implements IScheduledClassService {
+@Service
+public class ScheduledClassService implements IScheduledClassService{
     private static IScheduledClassService service = null;
     private IScheduledClassRepository repository;
 

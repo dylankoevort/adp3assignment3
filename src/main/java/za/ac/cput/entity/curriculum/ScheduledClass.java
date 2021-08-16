@@ -23,6 +23,15 @@ public class ScheduledClass
     public String getScheduledClassId() {
         return scheduledClassId;
     }
+    public int getSubjectCode() {
+        return subjectCode;
+    }
+    public int getRoomCode() {
+        return roomCode;
+    }
+    public String getClassTime() {
+        return classTime;
+    }
 
     @Override
     public String toString() {
