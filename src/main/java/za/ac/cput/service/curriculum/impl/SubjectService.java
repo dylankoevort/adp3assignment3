@@ -1,5 +1,6 @@
 package za.ac.cput.service.curriculum.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.curriculum.Subject;
 
 import za.ac.cput.repository.curriculum.impl.SubjectRepository;
@@ -12,6 +13,7 @@ import java.util.Set;
  * Author: Shane Knoll (218279124)
  * 29 July2021
  */
+@Service
 public class SubjectService implements ISubjectService {
     private static SubjectService Subjectservice= null;
     private SubjectRepository repository;

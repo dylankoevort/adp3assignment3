@@ -13,6 +13,8 @@ public class Lecturer {
     private String emailAddress;
     private String contactNo;
 
+    private Lecturer(){}
+
     private Lecturer(LecturerBuilder b){
         this.lecturerID=b.lecturerID;
         this.firstName=b.firstName;
@@ -26,6 +28,42 @@ public class Lecturer {
         return lecturerID;
     }
     //this is the static class LecturerBuilder/builder class in the Lecturer Entity
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
+    //toString for the Subject class
+    @Override
+    public String toString() {
+        return "Lecturer{" +
+                "lecturerID=" + lecturerID +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", contactNo='" + contactNo + '\'' +
+                '}';
+    }
+
+
+
     public static class LecturerBuilder{
         private String lecturerID;
         private String firstName,lastName;
@@ -85,16 +123,8 @@ public class Lecturer {
 
 
     }
-    //toString for the Subject class
-    @Override
-    public String toString() {
-        return "Lecturer{" +
-                "lecturerID=" + lecturerID +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", contactNo='" + contactNo + '\'' +
-                '}';
-    }
+
+
+
+
 }

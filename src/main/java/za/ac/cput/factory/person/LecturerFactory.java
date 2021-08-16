@@ -15,8 +15,7 @@ public class LecturerFactory {
 
     public static Lecturer build(String firstName, String lastName, int age, String emailAddress, String contactNo) {
 
-        if(firstName.isEmpty()||lastName.isEmpty()||age<=0||emailAddress.isEmpty()||contactNo==null)
-            return null;
+
 
         String lecturerID = UUID.randomUUID().toString();
 

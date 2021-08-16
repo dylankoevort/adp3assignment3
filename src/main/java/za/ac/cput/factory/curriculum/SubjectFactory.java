@@ -16,8 +16,8 @@ public class SubjectFactory {
 
     public static Subject build( String subjectName, int lecturerID, String courseCode, int semesterID) {
 
-        if(subjectName.isEmpty()||lecturerID<=0||courseCode.isEmpty()||semesterID<=0)
-            return null;
+        if(subjectName.isEmpty()||lecturerID<=0||courseCode.isEmpty()||semesterID<=0){
+            return null;}
 
         String subjectCode = UUID.randomUUID().toString();
 

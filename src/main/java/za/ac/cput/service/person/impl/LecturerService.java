@@ -1,5 +1,6 @@
 package za.ac.cput.service.person.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.person.Lecturer;
 import za.ac.cput.repository.person.impl.LecturerRepository;
 
@@ -12,6 +13,7 @@ import java.util.Set;
  * Author: Shane Knoll (218279124)
  * 29 July2021
  */
+@Service
 public class LecturerService implements ILecturerService {
 
     private static LecturerService Lecturerservice= null;
