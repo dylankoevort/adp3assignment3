@@ -1,5 +1,6 @@
 package za.ac.cput.service.tertiaryInstitution.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.tertiaryInstitution.Course;
 import za.ac.cput.repository.tertiaryInstitution.ICourseRepository;
 import za.ac.cput.repository.tertiaryInstitution.impl.CourseRepository;
@@ -14,6 +15,7 @@ import java.util.Set;
  * 30 July 2021
  */
 
+@Service
 public class CourseService implements ICourseService {
     private static ICourseService service = null;
     private ICourseRepository repository;
