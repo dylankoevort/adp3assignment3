@@ -22,6 +22,14 @@ public class Room {
         return roomCode;
     }
 
+    public String getRoomType() { return roomType; }
+
+    public int getRoomCapacity() { return roomCapacity; }
+
+    public int getBuildingID() { return buildingID; }
+
+    public int getRoomFloor() { return roomFloor; }
+
     @Override
     public String toString() {
         return "Room{" +
