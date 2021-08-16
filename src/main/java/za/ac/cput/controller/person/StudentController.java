@@ -32,12 +32,14 @@ public class StudentController {
 
     @PostMapping("/delete/{id}")
     public boolean delete(@PathVariable String id) {
+
         return studentService.delete(id);
     }
 
 
     @GetMapping("/getall")
     public Set<Student> getAll() {
+
         return studentService.getAll();
     }
 }

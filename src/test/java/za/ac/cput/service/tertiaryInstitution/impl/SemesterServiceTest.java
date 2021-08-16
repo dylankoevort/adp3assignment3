@@ -1,4 +1,4 @@
-package za.ac.cput.service.tertiaryInstitution;
+package za.ac.cput.service.tertiaryInstitution.impl;
 /**
  *
  * SemesterServiceTest.java
@@ -11,8 +11,6 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.tertiaryInstitution.Semester;
 import za.ac.cput.factory.tertiaryInstitution.SemesterFactory;
 import za.ac.cput.service.tertiaryInstitution.ISemesterService;
-import za.ac.cput.service.tertiaryInstitution.impl.SemesterService;
-
 import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,29 +30,30 @@ class SemesterServiceTest {
         System.out.println("Created: " + created);
     }
 
-   @Test
+    @Test
     void b_read() {
         Semester read = service.read(semester.getSemesterID());
         assertNotNull(read);
-       System.out.println("Read: " + read);
-   }
+        System.out.println("Read: " + read);
+    }
 
+    @Test
     void c_update() {
         Semester updated = new Semester.SemesterBuilder().copy(semester).setSemesterID("20214545").build();
         assertNotNull(service.update(updated));
-       System.out.println("Updated: " + updated);
+        System.out.println("Updated: " + updated);
     }
 
     @Test
-   void e_delete() {
+    void e_delete() {
         boolean deleted = service.delete(semester.getSemesterID());
-       assertTrue(deleted);
-       System.out.println("Delete: " + deleted);
+        assertTrue(deleted);
+        System.out.println("Delete: " + deleted);
     }
 
     @Test
-   void d_getAll() {
+    void d_getAll() {
         System.out.println("Details: \n" + service.getAll());
-   }
+    }
 
 }

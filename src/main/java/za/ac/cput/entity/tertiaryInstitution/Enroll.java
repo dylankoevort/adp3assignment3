@@ -1,11 +1,14 @@
 package za.ac.cput.entity.tertiaryInstitution;
+
+import java.util.Date;
+
 /**
  * Enroll.java
  * Entity for enroll using builder pattern
  * Author: Tisetso Kotoana
  * Date:01 June 2021
  */
-import java.util.Date;
+
 public class Enroll {
     private String studentID;
     private String courseCode;
@@ -20,7 +23,20 @@ public class Enroll {
     }
 
     public String getStudentID() {
+
         return studentID;
+    }
+
+    public String getCourseCode(){
+        return courseCode;
+    }
+
+    public Date getDate(){
+        return date;
+    }
+
+    public boolean getPaymentReceived(){
+        return paymentReceived;
     }
     @Override
     public String toString() {
@@ -61,16 +77,14 @@ public class Enroll {
 
             return new Enroll(this);
         }
-        public Enroll.EnrollBuilder copy(Enroll enroll){
+
+        public EnrollBuilder copy(Enroll enroll){
             this.studentID=enroll.studentID;
            this.courseCode=enroll.courseCode;
            this.date=enroll.date;
            this.paymentReceived=enroll.paymentReceived;
-
-
             return this;
         }
-
 
     }
 }
