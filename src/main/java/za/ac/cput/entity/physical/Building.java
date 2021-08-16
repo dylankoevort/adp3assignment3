@@ -21,6 +21,12 @@ public class Building {
         return buildingID;
     }
 
+    public String getBuildingName() { return buildingName; }
+
+    public String getBuildingAddress() { return buildingAddress; }
+
+    public int getRoomCount() { return roomCount; }
+
     @Override
     public String toString() {
         return "Building{" +
