@@ -14,6 +14,7 @@ import za.ac.cput.repository.IRepository;
 
 import java.util.Set;
 
+@Deprecated
 public interface IStudentRepository extends IRepository<Student, String> {
     public Set<Student> getAll();
 }
