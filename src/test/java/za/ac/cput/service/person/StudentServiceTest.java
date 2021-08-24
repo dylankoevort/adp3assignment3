@@ -12,6 +12,8 @@ package za.ac.cput.service.person;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.entity.person.Student;
 import za.ac.cput.factory.person.StudentFactory;
 import za.ac.cput.service.person.impl.StudentService;
@@ -19,8 +21,10 @@ import za.ac.cput.service.person.impl.StudentService;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+@SpringBootTest
 class StudentServiceTest {
-    private static IStudentService service = StudentService.getService();
+    @Autowired
+    private StudentService service;
     private static Student student = StudentFactory.build("Dylan", "Koevort", "218088@mycput.com", "0731234567", 21);
 
     @Test
