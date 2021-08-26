@@ -1,6 +1,8 @@
 package za.ac.cput.service.tertiaryInstitution;
 
 import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.entity.tertiaryInstitution.Course;
 import za.ac.cput.factory.tertiaryInstitution.CourseFactory;
 import za.ac.cput.service.tertiaryInstitution.impl.CourseService;
@@ -10,8 +12,11 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+@SpringBootTest
 class CourseServiceTest {
-    private static ICourseService service = CourseService.getService();
+
+    @Autowired
+    private CourseService service;
     private static Course course = CourseFactory.build("ADP372S","Applications Development Practise","057",20, 3, true);
 
     @Disabled("Not needed.")
@@ -21,9 +26,6 @@ class CourseServiceTest {
     @Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
     @AfterAll
     static void tearDown(){}
-
-    @Test
-    void testIdentity(){}
 
     @Test
     void a_create() {

@@ -29,15 +29,15 @@ public class DepartmentControllerTest {
         assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
         department = postResponse.getBody();
         System.out.println("Saved data: " + department);
-        assertEquals(department.getdepartmentId(), postResponse.getBody().getDepartmentName());
+        assertEquals(department.getDepartmentId(), postResponse.getBody().getDepartmentId());
     }
 
     @Test
     void b_read() {
-        String url = BASE_URL + "/read/" + department.getdepartmentId();
+        String url = BASE_URL + "/read/" + department.getDepartmentId();
         System.out.println("URL: " + url);
         ResponseEntity<Department> response = restTemplate.getForEntity(url, Department.class);
-        assertEquals(department.getdepartmentId(), response.getBody().getDepartmentName());
+        assertEquals(department.getDepartmentId(), response.getBody().getDepartmentId());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class DepartmentControllerTest {
 
     @Test
     void e_delete() {
-        String url = BASE_URL + "/delete/" + department.getdepartmentId();
+        String url = BASE_URL + "/delete/" + department.getDepartmentId();
         System.out.println("URL: " + url);
         restTemplate.delete(url);
     }

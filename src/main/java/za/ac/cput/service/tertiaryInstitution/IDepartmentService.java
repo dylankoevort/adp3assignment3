@@ -14,4 +14,5 @@ import java.util.Set;
 
 public interface IDepartmentService extends IService<Department, String> {
     Set<Department> getAll();
+    Department getDepartmentId(String departmentId);
 }

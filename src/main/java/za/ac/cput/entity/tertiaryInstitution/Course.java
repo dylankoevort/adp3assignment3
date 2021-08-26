@@ -7,13 +7,19 @@ package za.ac.cput.entity.tertiaryInstitution;
  * 01 June 2021
  */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Course {
 
-    private String departmentId, courseCode, title;
+    @Id
+    private String departmentId;
+    private String courseCode, title;
     private int credit, duration;
     private boolean fullTime;
 
-    private Course(){}
+    public Course(){}
 
     public Course(CourseBuilder course) {
         this.courseCode = course.courseCode;
@@ -24,7 +30,7 @@ public class Course {
         this.fullTime = course.fullTime;
     }
 
-    public String getDepartmentId(){
+    public String getdepartmentId(){
         return departmentId;
     }
 

@@ -23,7 +23,7 @@ public class DepartmentController {
 
     @PostMapping
     public Department create (@RequestBody Department department){
-        Department newDepartment = DepartmentFactory.build(department.getdepartmentId(), department.getDepartmentName(), department.getDepartmentDesc());
+        Department newDepartment = DepartmentFactory.build(department.getDepartmentId(), department.getDepartmentName(), department.getDepartmentDesc());
         return departmentService.create(newDepartment);
     }
 

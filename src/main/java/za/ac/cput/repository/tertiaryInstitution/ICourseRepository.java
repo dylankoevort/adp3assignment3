@@ -12,6 +12,7 @@ import java.util.Set;
  * 22 July 2021
  */
 
+@Deprecated
 public interface ICourseRepository extends IRepository<Course, String> {
-    public Set<Course> getAll();
+    Set<Course> getAll();
 }

@@ -7,9 +7,16 @@ package za.ac.cput.entity.tertiaryInstitution;
  * 01 June 2021
  */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Department {
 
+    @Id
     private String departmentId, departmentName, departmentDesc;
+
+    public Department(){}
 
     public Department(DepartmentBuilder department){
         this.departmentId = department.departmentId;
@@ -17,7 +24,7 @@ public class Department {
         this.departmentDesc = department.departmentDesc;
     }
 
-    public String getdepartmentId() {
+    public String getDepartmentId() {
         return departmentId;
     }
 
@@ -68,6 +75,5 @@ public class Department {
 
             return this;
         }
-
     }
 }

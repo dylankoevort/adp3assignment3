@@ -3,6 +3,8 @@ package za.ac.cput.service.tertiaryInstitution;
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.tertiaryInstitution.Department;
 import za.ac.cput.factory.tertiaryInstitution.DepartmentFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.service.tertiaryInstitution.impl.DepartmentService;
 
 import java.util.concurrent.TimeUnit;
@@ -10,8 +12,11 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+@SpringBootTest
 class DepartmentServiceTest {
-    private static IDepartmentService service = DepartmentService.getService();
+
+    @Autowired
+    private DepartmentService service;
     private static Department department = DepartmentFactory.build("021", "PROJECTS"," ");
 
     @Disabled("Not needed.")
@@ -23,18 +28,15 @@ class DepartmentServiceTest {
     static void tearDown(){}
 
     @Test
-    void testIdentity(){}
-
-    @Test
     void a_create() {
         Department created = service.create(department);
-        assertEquals(department.getdepartmentId(), created.getdepartmentId());
+        assertEquals(department.getDepartmentId(), created.getDepartmentId());
         System.out.println("Created: " + created);
     }
 
     @Test
     void b_read() {
-        Department read = service.read(department.getdepartmentId());
+        Department read = service.read(department.getDepartmentId());
         assertNotNull(read);
         System.out.println("Read: " + read);
     }
@@ -48,7 +50,7 @@ class DepartmentServiceTest {
 
     @Test
     void e_delete() {
-        boolean x = service.delete(department.getdepartmentId());
+        boolean x = service.delete(department.getDepartmentId());
         assertTrue(x);
         System.out.println("Deleted: " + x);
     }
