@@ -8,52 +8,46 @@ This is the service implementation for the ScheduledClass entity.
 31 July 2021
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.entity.curriculum.ScheduledClass;
-import za.ac.cput.repository.curriculum.IScheduledClassRepository;
 import za.ac.cput.repository.curriculum.impl.ScheduledClassRepository;
 import za.ac.cput.service.curriculum.IScheduledClassService;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
-public class ScheduledClassService implements IScheduledClassService{
+public class ScheduledClassService implements IScheduledClassService {
     private static IScheduledClassService service = null;
-    private IScheduledClassRepository repository;
 
-    private ScheduledClassService() {
-        this.repository = ScheduledClassRepository.getRepository();
-    }
-
-    public static IScheduledClassService getService(){
-        if ( service == null) {
-            service = new ScheduledClassService();
-        }
-        return service;
-    }
+    @Autowired
+    private ScheduledClassRepository repository;
 
     @Override
-    public ScheduledClass create(ScheduledClass scheduledClass) {
-        return this.repository.create(scheduledClass);
-    }
+    public ScheduledClass create(ScheduledClass scheduledClass) { return this.repository.save(scheduledClass); }
 
     @Override
-    public ScheduledClass read(String s) {
-        return this.repository.read(s);
-    }
+    public ScheduledClass read(String scheduledClassId) { return this.repository.findById(scheduledClassId).orElse(null); }
 
     @Override
     public ScheduledClass update(ScheduledClass scheduledClass) {
-        return this.repository.update(scheduledClass);
+        if (this.repository.existsById(scheduledClass.getScheduledClassId()))
+            return this.repository.save(scheduledClass);
+        return null;
     }
 
     @Override
     public boolean delete(String scheduledClassId) {
-        return this.repository.delete(scheduledClassId);
+        this.repository.deleteById(scheduledClassId);
+        if (this.repository.existsById(scheduledClassId))
+            return false;
+        else
+            return true;
     }
 
     @Override
     public Set<ScheduledClass> getAll() {
-        return this.repository.getAll();
+        return this.repository.findAll().stream().collect(Collectors.toSet());
     }
 }

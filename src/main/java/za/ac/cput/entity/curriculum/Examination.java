@@ -7,15 +7,19 @@ This is the class for the Examination entity.
 
 package za.ac.cput.entity.curriculum;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.*;
 
+@Entity
 public class Examination
 {
+    @Id
     private int subjectCode;
     private String examDesc, examId;
     private LocalDate examDate;
 
-    private Examination() {}
+    protected Examination() {}
 
     private Examination(Builder builder)
     {

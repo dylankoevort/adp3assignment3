@@ -11,6 +11,7 @@ This is the test class for the ExaminationService implementation.
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import za.ac.cput.entity.curriculum.Examination;
 import za.ac.cput.factory.curriculum.ExaminationFactory;
 import za.ac.cput.service.curriculum.IExaminationService;
@@ -22,8 +23,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class ExaminationServiceTest {
 
+    @Autowired
+    private IExaminationService service;
     private static LocalDate examDate = LocalDate.of(2021, 7, 31);
-    private static IExaminationService service = ExaminationService.getService();
     private static Examination examination = ExaminationFactory.build(123, "End year exam", examDate);
 
     @Test

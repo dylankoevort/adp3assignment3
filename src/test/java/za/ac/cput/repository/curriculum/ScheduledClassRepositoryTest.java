@@ -1,5 +1,7 @@
+/*
 package za.ac.cput.repository.curriculum;
 
+*/
 /*
 Dinelle Kotze
 219089302
@@ -7,16 +9,14 @@ ScheduledClassRepositoryTest.java
 This is the test class for the ScheduledClassRepository entity.
 23 July 2021
  */
+/*
+
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.curriculum.ScheduledClass;
 import za.ac.cput.factory.curriculum.ScheduledClassFactory;
-import za.ac.cput.repository.curriculum.impl.ScheduledClassRepository;
-
-import java.util.Calendar;
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,4 +57,4 @@ class ScheduledClassRepositoryTest {
     void d_getAll() {
         System.out.println("Display All: \n" + repository.getAll());
     }
-}
+}*/

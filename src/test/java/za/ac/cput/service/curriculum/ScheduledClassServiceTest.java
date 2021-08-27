@@ -11,6 +11,7 @@ This is the test class for the ScheduledClassService implementation.
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import za.ac.cput.entity.curriculum.ScheduledClass;
 import za.ac.cput.factory.curriculum.ScheduledClassFactory;
 import za.ac.cput.service.curriculum.IScheduledClassService;
@@ -21,7 +22,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class ScheduledClassServiceTest {
 
-    private static IScheduledClassService service = ScheduledClassService.getService();
+    @Autowired
+    private IScheduledClassService service;
     private static ScheduledClass scheduledClass = ScheduledClassFactory.build("AB123", 123, 123, "10:00");
 
     @Test
