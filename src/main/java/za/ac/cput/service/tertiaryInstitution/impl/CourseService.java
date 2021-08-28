@@ -13,10 +13,12 @@ import java.util.stream.Collectors;
  * Service Implementation of Course Entity
  * @author Jonathan Kleynhans 217268153
  * 30 July 2021
+ * Updated: 28 August 2021
  */
 
 @Service
 public class CourseService implements ICourseService {
+    private static CourseService service = null;
 
     @Autowired
     private CourseRepository repository;
@@ -33,7 +35,9 @@ public class CourseService implements ICourseService {
 
     @Override
     public Course update(Course course) {
-        return this.repository.save(course);
+        if(this.repository.existsById(course.getcourseCode()))
+            return this.repository.save(course);
+        return null;
     }
 
     @Override

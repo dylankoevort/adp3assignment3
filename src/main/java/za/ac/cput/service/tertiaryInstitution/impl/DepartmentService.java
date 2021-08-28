@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Service Implementation of Department Entity
  * @author Jonathan Kleynhans 217268153
  * 30 July 2021
+ * Updated: 28 August 2021
  */
 
 @Service

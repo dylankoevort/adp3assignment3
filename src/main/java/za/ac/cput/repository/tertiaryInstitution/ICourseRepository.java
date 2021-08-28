@@ -10,6 +10,7 @@ import java.util.Set;
  * CourseRepository interface
  * @author Jonathan Kleynhans 217268153
  * 22 July 2021
+ * Updated: 28 August 2021
  */
 
 @Deprecated

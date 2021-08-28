@@ -10,9 +10,10 @@ import java.util.Set;
  * Service Interface for Department Entity
  * @author Jonathan Kleynhans 217268153
  * 30 July 2021
+ * Updated: 28 August 2021
  */
 
 public interface IDepartmentService extends IService<Department, String> {
-    Set<Department> getAll();
-    Department getDepartmentId(String departmentId);
+    public Set<Department> getAll();
+    public Department getDepartmentId(String departmentId);
 }

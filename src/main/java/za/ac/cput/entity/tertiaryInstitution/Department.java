@@ -5,16 +5,21 @@ package za.ac.cput.entity.tertiaryInstitution;
  * Course entity created using builder pattern.
  * @author Jonathan Kleynhans 217268153
  * 01 June 2021
+ * Updated: 28 August 2021
  */
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Department")
 public class Department {
 
     @Id
-    private String departmentId, departmentName, departmentDesc;
+    private String departmentId;
+    private String departmentName;
+    private String departmentDesc;
 
     public Department(){}
 
