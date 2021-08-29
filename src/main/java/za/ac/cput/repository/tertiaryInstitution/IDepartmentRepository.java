@@ -12,6 +12,7 @@ import java.util.Set;
  * 22 July 2021
  */
 
+@Deprecated
 public interface IDepartmentRepository extends IRepository<Department, String> {
     Set<Department> getAll();
 }

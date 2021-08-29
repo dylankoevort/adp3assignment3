@@ -10,8 +10,10 @@ import java.util.Set;
  * CourseRepository interface
  * @author Jonathan Kleynhans 217268153
  * 22 July 2021
+ * Updated: 28 August 2021
  */
 
+@Deprecated
 public interface ICourseRepository extends IRepository<Course, String> {
-    public Set<Course> getAll();
+    Set<Course> getAll();
 }

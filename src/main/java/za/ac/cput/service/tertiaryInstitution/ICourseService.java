@@ -10,8 +10,10 @@ import java.util.Set;
  * Service Interface for Course Entity
  * @author Jonathan Kleynhans 217268153
  * 30 July 2021
+ * Updated: 28 August 2021
  */
 
 public interface ICourseService extends IService<Course, String> {
-    Set<Course> getAll();
+    public Set<Course> getAll();
+    public Course getcourseCode(String courseCode);
 }

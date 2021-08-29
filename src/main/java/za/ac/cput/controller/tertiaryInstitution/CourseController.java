@@ -23,7 +23,7 @@ public class CourseController {
 
     @PostMapping("/create")
     public Course create (@RequestBody Course course){
-        Course newCourse = CourseFactory.build(course.getcourseCode(), course.getcourseTitle(), course.getDepartmentId(), course.getCredit(), course.getDuration(), course.getFullTime());
+        Course newCourse = CourseFactory.build(course.getcourseCode(), course.getcourseTitle(), course.getdepartmentId(), course.getCredit(), course.getDuration(), course.getFullTime());
         return courseService.create(newCourse);
     }
 
