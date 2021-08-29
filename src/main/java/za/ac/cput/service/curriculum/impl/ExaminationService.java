@@ -8,52 +8,58 @@ This is the service implementation for the Examination entity.
 31 July 2021
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.entity.curriculum.Examination;
-import za.ac.cput.repository.curriculum.IExaminationRepository;
 import za.ac.cput.repository.curriculum.impl.ExaminationRepository;
 import za.ac.cput.service.curriculum.IExaminationService;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class ExaminationService implements IExaminationService {
     private static IExaminationService service = null;
-    private IExaminationRepository repository;
 
-    private ExaminationService() {
-        this.repository = ExaminationRepository.getRepository();
-    }
-
-    public static IExaminationService getService(){
-        if ( service == null) {
-            service = new ExaminationService();
-        }
-        return service;
-    }
+    @Autowired
+    private ExaminationRepository repository;
 
     @Override
-    public Examination create(Examination examination) {
-        return this.repository.create(examination);
-    }
+    public Examination create(Examination examination) { return this.repository.save(examination); }
 
     @Override
-    public Examination read(String s) {
-        return this.repository.read(s);
-    }
+    public Examination read(String scheduledClassId) { return this.repository.findById(scheduledClassId).orElse(null); }
 
     @Override
     public Examination update(Examination examination) {
-        return this.repository.update(examination);
+        if (this.repository.existsById(examination.getExamId()))
+            return this.repository.save(examination);
+        return null;
     }
 
     @Override
     public boolean delete(String examinationId) {
-        return this.repository.delete(examinationId);
+        this.repository.deleteById(examinationId);
+        if (this.repository.existsById(examinationId))
+            return false;
+        else
+            return true;
     }
 
     @Override
     public Set<Examination> getAll() {
-        return this.repository.getAll();
+        return this.repository.findAll().stream().collect(Collectors.toSet());
+    }
+
+    public Examination getExaminationGivenDescription(String examinationDescription){
+        Examination e = null;
+        Set<Examination> examinations = getAll();
+        for (Examination examination : examinations) {
+            if (examination.getExamDesc().equals(examinationDescription)) {
+                e = examination;
+                break;
+            }
+        }
+        return e;
     }
 }

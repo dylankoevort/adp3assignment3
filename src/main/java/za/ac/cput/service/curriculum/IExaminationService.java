@@ -15,4 +15,5 @@ import java.util.Set;
 
 public interface IExaminationService extends IService <Examination, String> {
     Set<Examination> getAll();
+    public Examination getExaminationGivenDescription(String examinationDescription);
 }

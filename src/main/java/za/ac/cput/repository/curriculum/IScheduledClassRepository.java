@@ -13,6 +13,7 @@ import za.ac.cput.repository.IRepository;
 
 import java.util.Set;
 
+@Deprecated
 public interface IScheduledClassRepository extends IRepository<ScheduledClass, String> {
     Set<ScheduledClass> getAll();
 }

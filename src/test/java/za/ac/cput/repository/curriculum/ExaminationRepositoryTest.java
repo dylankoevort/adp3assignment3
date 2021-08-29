@@ -1,5 +1,7 @@
+/*
 package za.ac.cput.repository.curriculum;
 
+*/
 /**
  *
  * ExaminationRepositoryTest.java
@@ -11,7 +13,8 @@ package za.ac.cput.repository.curriculum;
  * Refactored date to localDate by Dinelle Kotze 219089302
  * 31 July 2021
  *
- */
+ *//*
+
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -66,4 +69,4 @@ class ExaminationRepositoryTest {
     void d_getAll() {
         System.out.println("Display All: \n" + repository.getAll());
     }
-}
+}*/

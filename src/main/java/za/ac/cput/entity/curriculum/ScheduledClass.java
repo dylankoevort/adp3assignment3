@@ -7,10 +7,16 @@ This is the class for the ScheduledClass entity.
 
 package za.ac.cput.entity.curriculum;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ScheduledClass
 {
+    @Id
+    private String scheduledClassId;
     private int subjectCode, roomCode;
-    private String scheduledClassId, classTime;
+    private String classTime;
 
     private ScheduledClass(Builder builder)
     {
@@ -18,6 +24,10 @@ public class ScheduledClass
         this.subjectCode = builder.subjectCode;
         this.roomCode = builder.roomCode;
         this.classTime = builder.classTime;
+    }
+
+    protected ScheduledClass() {
+
     }
 
     public String getScheduledClassId() {
