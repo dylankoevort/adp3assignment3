@@ -1,15 +1,14 @@
 package za.ac.cput.controller.physical;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.physical.Room;
 import za.ac.cput.factory.physical.RoomFactory;
 import za.ac.cput.service.physical.impl.RoomService;
 
 import java.util.Set;
 
+@RestController
+@RequestMapping("/room")
 public class RoomController {
 
     private RoomService roomService;
