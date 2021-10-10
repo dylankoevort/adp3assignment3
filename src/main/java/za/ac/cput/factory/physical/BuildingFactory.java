@@ -14,6 +14,11 @@ public class BuildingFactory {
         if(buildingID.isEmpty() || roomCount <= 0 || buildingName.isEmpty() || buildingAddress.isEmpty())
             return null;
 
-        return new Building.BuildingBuilder().setBuildingID(buildingID).setRoomCount(roomCount).setBuildingName(buildingName).setBuildingAddress(buildingAddress).build();
+        return new Building.BuildingBuilder()
+                .setBuildingID(buildingID)
+                .setRoomCount(roomCount)
+                .setBuildingName(buildingName)
+                .setBuildingAddress(buildingAddress)
+                .build();
     }
 }

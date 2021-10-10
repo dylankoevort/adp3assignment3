@@ -24,7 +24,7 @@ class BuildingControllerTest {
 
     private static Building building = BuildingFactory.build("ENG1",50,"Engineering Building","Disctrict Six Campus");
     @Autowired
-    private TestRestTemplate restTemplate;
+    private TestRestTemplate restTemplate = null;
     private final String BASE_URL = "http://localhost:8080/building";
 
 
@@ -33,7 +33,7 @@ class BuildingControllerTest {
     @Order(1)
     void create() {
         String url = BASE_URL+ "/createBuilding";
-        ResponseEntity<Building> postResponse = restTemplate.postForEntity(url, building, Building.class);
+        ResponseEntity<Building> postResponse = restTemplate.withBasicAuth("admin", "pass").postForEntity(url, building, Building.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
         building = postResponse.getBody();
@@ -46,7 +46,7 @@ class BuildingControllerTest {
     void read_Building() {
         String url = BASE_URL + "/readBuilding" + building.getBuildingID();
         System.out.println("URL for read: " + url);
-        ResponseEntity<Building> response = restTemplate.getForEntity(url, Building.class);
+        ResponseEntity<Building> response = restTemplate.withBasicAuth("admin", "password").getForEntity(url, Building.class);
         assertEquals(response.getBody().getBuildingID(), response.getBody().getBuildingID());
     }
 
@@ -57,7 +57,7 @@ class BuildingControllerTest {
         String url = BASE_URL + "/updateRoom";
         System.out.println("URL for update: " + url);
         System.out.println("Post data: " + updated);
-        ResponseEntity<Building> response = restTemplate.postForEntity(url, updated, Building.class);
+        ResponseEntity<Building> response = restTemplate.withBasicAuth("admin", "pass").postForEntity(url, updated, Building.class);
         assertNotNull(response.getBody());
     }
 
@@ -66,7 +66,7 @@ class BuildingControllerTest {
     void delete_Building() {
         String url = BASE_URL + "/deleteBuilding" + building.getBuildingID();
         System.out.println("URL: " + url);;
-        restTemplate.delete(url);
+        restTemplate.withBasicAuth("admin", "pass").delete(url);
     }
 
     @Test
@@ -75,7 +75,7 @@ class BuildingControllerTest {
         String url = BASE_URL + "/getallBuilding";
         HttpHeaders head = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, head);
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate.withBasicAuth("admin", "pass").exchange(url, HttpMethod.GET, entity, String.class);
         System.out.println(url);
         System.out.println("Show All Buildings:");
         System.out.println(response);
