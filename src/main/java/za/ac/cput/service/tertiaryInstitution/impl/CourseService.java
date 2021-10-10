@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class CourseService implements ICourseService {
-    private static CourseService service = null;
 
     @Autowired
     private CourseRepository repository;

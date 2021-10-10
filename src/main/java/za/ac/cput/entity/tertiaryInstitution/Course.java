@@ -64,7 +64,7 @@ public class Course {
         return "Course{" +
                 "courseCode='" + courseCode + '\'' +
                 ", title='" + title + '\'' +
-                ", departmentID=" + departmentId +
+                ", departmentId=" + departmentId +
                 ", credit=" + credit +
                 ", duration=" + duration +
                 ", fullTime=" + fullTime +

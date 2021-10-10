@@ -14,6 +14,6 @@ import java.util.Set;
  */
 
 public interface ICourseService extends IService<Course, String> {
-    public Set<Course> getAll();
-    public Course getcourseCode(String courseCode);
+     Set<Course> getAll();
+     Course getcourseCode(String courseCode);
 }
